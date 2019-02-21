@@ -1,0 +1,110 @@
+//.checkbox-text
+//  display: block
+//  margin-bottom: 17px
+//  padding-left: 37px
+//  height: 25px
+//  font-size: 14px
+//  font-weight: bolder
+//  color: #e1e1e1
+//  user-select: none
+//
+//.checkbox
+//  display: none
+//  &:checked
+//    & +.checkbox-text
+//      color: #000
+
+.es-custom-checkbox__label {
+  font-family: $mainFontLight;
+  font-size: rem(15px);
+  color: #cecece;
+  user-select: none;
+  cursor: pointer;
+}
+
+.es-custom-checkbox__link {
+  font-family: $mainFontLight;
+  font-size: rem(15px);
+  text-decoration: underline;
+  color: #ab0358;
+}
+
+.es-custom-checkbox__icon-container {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  float: left;
+  //margin-right: 15px
+  width: rem(16px);
+  height: rem(16px);
+  border: 2px solid #ab0358;
+  border-radius: 0rem;
+  background-color: white;
+}
+
+.es-custom-checkbox__checkbox:checked ~ .es-custom-checkbox__icon-container::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 0.6rem; //563rem
+  height: 0.3rem;
+  border-bottom: 0.125rem solid #ab0358;
+  border-left: 0.125rem solid #ab0358;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  //background-color: rgba(255,255,255,0)
+  //& > .custom-checkbox__checked-icon
+  //  position: absolute
+  //  top: 50%
+  //  left: 50%
+  //  transform: translate(-50%,-50%)
+  //  width: 1.55rem //563rem
+  //  height: 1.55rem
+  //& > .custom-checkbox__unchecked-icon
+  //  position: absolute
+  //  top: 50%
+  //  left: 50%
+  //  transform: translate(-50%,-50%)
+  //  width: 1.45rem //563rem
+  //  height: 1.45rem
+  //svg
+  //  position: absolute
+  //  top: 50%
+  //  left: 50%
+  //  transform: translate(-50%,-50%)
+  //  width: 1.45rem //563rem
+  //  height: 1.45rem
+}
+
+.es-custom-checkbox__container {
+  position: relative;
+  display: block;
+  margin-bottom: rem(10px);
+  padding-left: rem(25px);
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.es-custom-checkbox__checkbox {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.es-custom-checkbox__checkbox.invalid:not(:focus){
+  //можно повесить иконку
+}
+
+.es-custom-checkbox__checkbox + .invalid{
+  display: none;
+}
+
+.es-custom-checkbox__checkbox.invalid + .invalid{
+  display: block;
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
+}

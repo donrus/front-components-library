@@ -1,0 +1,99 @@
+.es-jumping-ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  //animation-duration: 7s;
+  //animation-iteration-count: infinite;
+  //animation-name: es-jumping;
+  //animation-timing-function: linear;
+  transform-origin: center;
+}
+
+@media screen and (max-width: 998px) {
+  .es-jumping-ball {
+    background-image: none !important;
+  }
+}
+
+@keyframes es-jumping {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  15% {
+    transform: translate(-10px, -10px);
+  }
+
+  30% {
+    transform: translate(10px, 10px);
+  }
+
+  45% {
+    transform: translate(10px, 10px);
+  }
+
+  60% {
+    transform: translate(0px, 0px);
+  }
+
+  75% {
+    transform: translate(-10px, 10px);
+  }
+
+  90% {
+    transform: translate(10px, -10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes es-round {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  10% {
+    transform: translate(0px, -10px);
+  }
+
+  20% {
+    transform: translate(5px, -5px);
+  }
+
+  30% {
+    transform: translate(10px, 0px);
+  }
+
+  40% {
+    transform: translate(5px, 5px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  60% {
+    transform: translate(-5px, 5px);
+  }
+
+  70% {
+    transform: translate(-10px, 0px);
+  }
+
+  80% {
+    transform: translate(-5px, -5px);
+  }
+
+  90% {
+    transform: translate(0px, -10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

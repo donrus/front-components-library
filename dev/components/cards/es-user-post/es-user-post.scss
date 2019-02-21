@@ -1,0 +1,82 @@
+@import "../../../elements/images/es-img-png/es-img-png";
+
+.es-user-post__container {
+  width: 100%;
+}
+
+.es-user-post__header {
+  align-items: center;
+  display: inline-flex;
+  width: 100%;
+}
+
+.es-user-post__foto-container {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: rem(15px);
+  width: rem(60px);
+  height: rem(60px);
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.es-user-post__user-foto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.es-user-post__header {
+  margin-bottom: rem(20px);
+}
+
+.es-user-post__date {
+  margin-bottom: rem(2px);
+  font-family: $mainFontRegular;
+  font-size: rem(12px);
+  line-height: 1.1;
+  text-align: left;
+  color: #979797;
+}
+
+.es-user-post__user {
+  margin-bottom: rem(2px);
+  font-family: $mainFontRegular;
+  font-size: rem(16px);
+  line-height: 1.1;
+  text-align: left;
+  color: #ab0358;
+}
+
+.es-user-post__post-header {
+  font-family: $mainFontMedium;
+  font-size: rem(22px);
+  line-height: 1.1;
+  text-align: left;
+  color: #ab0358;
+}
+
+.es-user-post__content {
+  padding: rem(10px);
+  font-family: $mainFontLight;
+  font-size: rem(15px);
+  line-height: 1.7;
+  text-align: left;
+  color: #979797;
+}
+
+.es-user-post__post-foto-container {
+  position: relative;
+  padding: rem(10px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.es-user-post__post-foto {
+  width: 100%;
+  height: auto;
+}

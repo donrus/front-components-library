@@ -1,0 +1,75 @@
+
+.es-custom-accordion {
+  //max-width: 50rem;
+
+
+  li {
+    position: relative;
+    padding-bottom: rem(30px);
+    padding-left: 40px;
+    border-bottom: rem(1px);
+
+    p {
+      padding-top: 0px;
+      padding-right: 25%;
+      padding-bottom: 10px;
+      //padding: 0.625rem 1.563rem 1.875rem;
+      padding-left: 0px;
+      font-family: "RobotoRegular";
+      font-size: 22px;
+      text-align: left;
+      color: #474747;
+
+      div {
+        a {
+          display: inline;
+          text-align: left;
+          text-decoration: underline;
+          color: #ab0358;
+        }
+      }
+    }
+  }
+
+  li > a {
+    display: block;
+    width: 100%;
+    font-family: "RobotoBold";
+    font-size: 28px;
+    text-align: left;
+    color: #ab0358;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      content: "";
+      position: absolute; /* Абсолютное позиционирование */
+      top: rem(8px);
+      left: rem(15px);
+      border: rem(10px) solid transparent;
+      border-left: rem(10px) solid #ab0358;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  p {
+    padding: 0.438rem;
+    font-size: 0.875rem;
+    line-height: 2;
+  }
+
+  a.active::after {
+    top: rem(15px);
+    left: rem(8px);
+    transform: rotate(90deg);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.es-custom-accordion .es-accordion-link + .es-accordion-content {
+  height: 0px;
+}
+
+.es-accordion-content {
+  overflow: hidden;
+}

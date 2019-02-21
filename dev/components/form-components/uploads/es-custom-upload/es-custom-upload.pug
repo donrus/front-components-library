@@ -1,0 +1,9 @@
+mixin es-custom-upload(customUploadContainerClass, inputID, inputName, inputClass, labelText, inputPlaceholder, labelClass, spanClass, inputAccept)
+    div(class = "es-custom-upload__container" + " " + customUploadContainerClass)
+        label(for=inputID class=labelClass).es-custom-upload__label=labelText
+        span(class=spanClass).es-custom-upload__span=inputPlaceholder
+        div(class="es-custom-upload-button")
+            img(class="es-custom-upload-button__icon" src="./img/icon-attach.png" alt="Стрелка указывает внутрь круга")
+            span(class="es-custom-upload-button__text") Прикрепить файл
+        input(type="file" id=inputID name=inputName class=inputClass accept=inputAccept).es-custom-upload__field
+        .es-custom-upload__error-message

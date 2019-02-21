@@ -1,0 +1,5 @@
+mixin es-custom-input(customInputFromContainer, customInputClassModifier, inputType, inputID, inputName, inputClass, labelText, inputPlaceholder, labelClass)
+    div(class="es-custom-input__container"+" "+customInputFromContainer+" "+customInputClassModifier)
+        label(class="es-custom-input__label"+" "+labelClass for=inputID)=labelText
+        input(class="es-custom-input__field"+" "+inputClass type=inputType id=inputID name=inputName placeholder=inputPlaceholder)
+        .es-custom-input__error-message

@@ -1,0 +1,10 @@
+mixin es-radio-player(radioPlayerClassFromContainer, radioPlayerClassModifier)
+    div(class="es-radio-player"+" "+radioPlayerClassFromContainer+" "+radioPlayerClassModifier)
+        div.es-radio-player__button-container
+            include button-play.svg
+        div.es-radio-player__content-container
+            .es-radio-player__live-air Слушайте
+            .es-radio-player__programm-name Программа
+            .es-radio-player__composition Исполнитель и композиция
+    audio(id="es-radio-player__audio" preload="none" controls style="max-width: 100%")
+        source(src="http://hls-02-europaplus.emgsound.ru/11/playlist.m3u8" type="application/x-mpegURL")

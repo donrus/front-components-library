@@ -1,0 +1,26 @@
+.es-text-link {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #ffffff;
+
+  &:hover,
+  &.hover {
+    border-color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+    color: darken(#ffffff, 10);
+  }
+
+  &:focus,
+  &.focus {
+    border-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: grey;
+    pointer-events: none;
+  }
+}

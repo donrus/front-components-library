@@ -1,0 +1,14 @@
+include ../../../elements/images/es-img-png/es-img-png
+
+mixin es-user-post(postClassFromContainer, postClassModifier, userFotoUrl, postFotoUrl, postUser, postHeader)
+    .es-user-post__container(class=postClassFromContainer+" "+postClassModifier)
+        .es-user-post__header
+            .es-user-post__foto-container
+                +es-img-png("es-user-post__user-foto", "", userFotoUrl, "Фотография пользователя")
+            .es-user-post__header-container
+                .es-user-post__date 12 февраля
+                .es-user-post__user=postUser
+                .es-user-post__post-header=postHeader
+        .es-user-post__content Найти того, кто хотя бы раз не болел острым респираторным вирусным заболеванием,\nдостаточно проблематично.\nК сожалению, гриппом и ОРВИ болеют как взрослые, так и дети.\nДети чаще всего подхватывают инфекцию в школе или в садике, кружках, секциях, то есть, в детских коллективах. При этом за здоровьем детей неустанно смотрят родители. В случае малейшей опасности они готовы принять меры экстренной профилактики и приложить все усилия, направленные на скорейшее выздоровление ребёнка.
+        .es-user-post__post-foto-container
+            +es-img-png("es-user-post__post-foto", "", postFotoUrl, "Картинка поста")

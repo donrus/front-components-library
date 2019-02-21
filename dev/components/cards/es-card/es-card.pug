@@ -1,0 +1,8 @@
+mixin es-card(cardClassFromContainer, cardClassModifier, imgUrl, cardHeader, cardContent)
+    section(class="es-card"+" "+cardClassFromContainer+" "+cardClassModifier)
+        .es-card__img-container
+            picture
+                source(srcset=imgUrl)
+                img(class="es-card__img" src=imgUrl alt="")
+        h3.es-card__header=cardHeader
+        div.es-card__content=cardContent

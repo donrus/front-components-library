@@ -1,0 +1,89 @@
+.es-close-button__container {
+  display: inline-block;
+}
+
+.es-close-button__circle {
+  position: relative;
+  display: inline-block;
+  margin: 10px 20px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ab0358;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.es-close-button__circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -12px;
+  width: 24px;
+  height: 4px;
+  background-color: #ab0358;
+  transform: rotate(-45deg);
+  /*@include transform-origin(100%,100%);*/
+}
+
+.es-close-button__circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -12px;
+  width: 24px;
+  height: 4px;
+  background-color: #ab0358;
+  transform: rotate(45deg);
+  /*@include transform-origin(0%,0%);*/
+}
+
+.es-close-button__circle {
+  border: 0px solid #ab0358;
+  box-shadow: 0px 0px 0px 0px #ffffff inset;
+  transition: cubic-bezier(0.175, 0.885, 0.52, 1.775) 200ms;
+}
+
+.es-close-button__circle::before,
+.circle[data-animation="showShadow"]::after {
+  transition: cubic-bezier(0.175, 0.885, 0.52, 1.775) 200ms;
+}
+
+.es-close-button__circle:not(.close-animation):hover {
+  box-shadow: 0px 0px 0px 4px #ab0358 inset;
+}
+
+.es-close-button__circle:not(.close-animation):hover::before {
+  transform: scale(0.7) rotate(45deg);
+  transition-delay: 100ms;
+}
+
+.es-close-button__circle:not(.close-animation):hover::after {
+  transform: scale(0.7) rotate(-45deg);
+  transition-delay: 100ms;
+}
+
+.es-close-button__circle.close-animation {
+  opacity: 0;
+  transform: scale(0);
+  transition: ease-out 300ms;
+}
+
+
+//@media screen and (max-height:  550px) and (max-width: 480px){
+//  .custom-close-button__circle:after {
+//      background-color: black;
+//  }
+//  .custom-close-button__circle:before {
+//    background-color: black;
+//  }
+//  .custom-close-button__circle:not(.close-animation):hover {
+//    box-shadow: 0px 0px 0px 4px black inset;
+//  }
+//
+//}

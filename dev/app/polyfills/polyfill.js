@@ -1,0 +1,2 @@
+require('./forEachPolyfill');
+require('./matchesPolyfill');

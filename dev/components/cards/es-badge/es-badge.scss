@@ -1,0 +1,61 @@
+@import "../../../elements/images/es-img-png/es-img-png";
+
+.es-badge {
+  align-items: center;
+  display: inline-flex;
+  padding: rem(30px);
+  width: 100%;
+  max-width: rem(380px);
+  border: 1px solid #ebebeb;
+  border-radius: rem(10px);
+  background-color: #ffffff;
+}
+
+.es-badge__foto-container {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: rem(25px);
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.es-badge__foto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.es-badge__data-container{
+  //так не будет работать в IE
+  //flex-basis: 65%;
+  //для IE нужно так
+  flex-basis: auto;
+  width: 65%;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.es-badge__header {
+  margin-bottom: rem(15px);
+  font-family: $mainFontMedium;
+  font-size: rem(15px);
+  line-height: 1.1;
+  text-align: left;
+  text-decoration: underline;
+  color: #535353;
+}
+
+.es-badge__content {
+  font-family: $mainFontMedium;
+  font-size: rem(22px);
+  line-height: 1.1;
+  text-align: left;
+  color: #007cd3;
+}

@@ -1,0 +1,48 @@
+
+.es-radio-player {
+  flex-wrap: nowrap;
+  align-items: center;
+  display: inline-flex;
+}
+
+.es-radio-player__button-container {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: rem(15px);
+  width: rem(50px);
+  height: rem(50px);
+  cursor: pointer;
+}
+
+.es-radio-player__content-container {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  color: #ffffff;
+}
+
+.es-radio-player__live-air {
+  font-family: $mainFontBold;
+  font-size: rem(12px);
+}
+
+.es-radio-player__programm-name {
+  font-family: $mainFontBold;
+  font-size: rem(18px);
+  text-transform: uppercase;
+}
+
+.es-radio-player__composition {
+  font-family: $mainFontRegular;
+  font-size: rem(18px);
+  height: rem(22px);
+  max-width: rem(250px);
+  text-overflow: ellipsis;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#es-radio-player__audio{
+  display: none;
+}

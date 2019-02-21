@@ -1,0 +1,128 @@
+@import "../../elements/icons/es-icon-png/es-icon-png";
+@import "../../elements/links/es-text-link/es-text-link";
+@import "../../elements/buttons/es-simple-button/es-simple-button";
+@import "../../elements/buttons/es-icon-button/es-icon-button";
+
+.es-autorization-block {
+  flex-wrap: nowrap;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.es-autorization-block__avatar-icon {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: none;
+  //display: inline-block;
+  margin-right: rem(10px);
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.es-autorization-block__user-link {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: none;
+  max-width: 150px;
+  max-height: 65px;
+  overflow: hidden;
+  //display: inline-block;
+  margin-right: rem(20px);
+  font-family: $mainFontBold;
+  font-size: rem(25px);
+}
+
+.es-autorization-block__exit-button {
+  display: none;
+  min-width: rem(100px);
+  min-height: rem(35px);
+  border-radius: .25rem;
+  box-shadow: none;
+  background-color: #ffffff;
+  font-family: $mainFontBold;
+  font-size: rem(18px);
+  color: #ab0358;
+
+  &:focus,
+  &.es-focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:not(:disabled):not(.es-disabled):active,
+  &:not(:disabled):not(.es-disabled).es-active {
+    box-shadow: inset 0 3px 5px rgba(#ab0358, .125);
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem rgba(#ab0358, 0.25);
+    }
+  }
+}
+
+.es-autorization-block__register-login-block {
+  padding-right: rem(15px);
+  padding-left: rem(15px);
+  height: rem(35px);
+  border-radius: rem(5px);
+  background-color: #ab0358;
+  line-height: rem(35px);
+  color: #ffffff;
+}
+
+.es-autorization-block__login-link,
+.es-autorization-block__registration-link {
+  font-family: $mainFontBold;
+  font-size: rem(16px);
+  text-decoration: none;
+
+  &:hover,
+  &.hover {
+    text-decoration: none;
+    color: darken(#ffffff, 10);
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: grey;
+    pointer-events: none;
+  }
+}
+
+.es-autorization-block__enter-button {
+  position: relative;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: none;
+  padding: rem(0px);
+  width: rem(50px);
+  height: rem(50px);
+
+  .es-icon-button__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  //.es-autorization-block__register-login-block {
+  //  display: none;
+  //}
+  //
+  //.es-autorization-block__enter-button {
+  //  display: inline-block;
+  //}
+}

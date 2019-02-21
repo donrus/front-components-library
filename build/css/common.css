@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "CirceLight";
+  font-style: normal;
+  font-weight: 300;
+  src: url(fonts/CirceLight.35bd30e8.eot);
+  src: url(fonts/CirceLight.35bd30e8.eot?#iefix) format("embedded-opentype"), url(fonts/CirceLight.16091c1e.woff) format("woff"), url(fonts/CirceLight.ffdfbc53.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "CirceRegular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/CirceRegular.fdbcd390.eot);
+  src: url(fonts/CirceRegular.fdbcd390.eot?#iefix) format("embedded-opentype"), url(fonts/CirceRegular.b98e521a.woff) format("woff"), url(fonts/CirceRegular.df09d71e.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "CirceBold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/CirceBold.c11bc646.eot);
+  src: url(fonts/CirceBold.c11bc646.eot?#iefix) format("embedded-opentype"), url(fonts/CirceBold.c2b6c779.woff) format("woff"), url(fonts/CirceBold.03a8e4ce.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "CirceExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url(fonts/CirceExtraBold.1ef1e26f.eot);
+  src: url(fonts/CirceExtraBold.1ef1e26f.eot?#iefix) format("embedded-opentype"), url(fonts/CirceExtraBold.cf1bbc87.woff) format("woff"), url(fonts/CirceExtraBold.da2eb7b2.ttf) format("truetype"); }
+
+html {
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.3; }
+
+body {
+  margin: 0;
+  font-family: "CirceRegular", arial, sans-serif; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0; }
+
+body {
+  background-color: grey; }
+
+.es-simple-button {
+  width: 10rem;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #007bff; }
+  .es-simple-button:hover, .es-simple-button:focus {
+    text-decoration: none; }
+  .es-simple-button:focus, .es-simple-button.es-focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  .es-simple-button.es-disabled, .es-simple-button:disabled {
+    opacity: .65;
+    box-shadow: none; }
+  .es-simple-button:not(:disabled):not(.es-disabled) {
+    cursor: pointer; }
+  .es-simple-button:not(:disabled):not(.disabled):active, .es-simple-button:not(:disabled):not(.disabled).active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+    .es-simple-button:not(:disabled):not(.disabled):active:focus, .es-simple-button:not(:disabled):not(.disabled).active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+.es-simple-button--nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.es-simple-button--wide {
+  width: 100%; }
+
+.es-simple-button--transparent {
+  color: #007bff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #007bff; }
+  .es-simple-button--transparent:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+  .es-simple-button--transparent:focus, .es-simple-button--transparent.es-focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+  .es-simple-button--transparent.es-disabled, .es-simple-button--transparent:disabled {
+    color: #007bff;
+    background-color: transparent; }
+  .es-simple-button--transparent:not(:disabled):not(.es-disabled):active, .es-simple-button--transparent:not(:disabled):not(.es-disabled).es-active {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+  .es-simple-button--transparent:not(:disabled):not(.es-disabled):active:focus, .es-simple-button--transparent:not(:disabled):not(.es-disabled).es-active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+

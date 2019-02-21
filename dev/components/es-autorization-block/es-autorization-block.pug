@@ -1,0 +1,18 @@
+include ../../elements/icons/es-icon-png/es-icon-png
+include ../../elements/links/es-text-link/es-text-link
+include ../../elements/buttons/es-simple-button/es-simple-button
+include ../../elements/buttons/es-icon-button/es-icon-button
+
+mixin es-autorization-block(autorizationBlockClassFromContainer, autorizationBlockClassModifier)
+    div(class="es-autorization-block"+" "+autorizationBlockClassFromContainer+" "+autorizationBlockClassModifier)
+        +es-icon-png("es-autorization-block__avatar-icon","")
+        +es-text-link("#user-post", "Алла Борисова","es-autorization-block__user-link","")
+        +es-simple-button("button", "", "es-autorization-block__exit-button", "Выход")
+        .es-autorization-block__register-login-block
+            +es-text-link("#", "Вход","es-autorization-block__login-link","")
+            span &nbsp;
+            span /
+            span &nbsp;
+            +es-text-link("#", "Регистрация","es-autorization-block__registration-link","")
+        +es-icon-button("es-autorization-block__enter-button","","./img/button-exit.png", "")
+

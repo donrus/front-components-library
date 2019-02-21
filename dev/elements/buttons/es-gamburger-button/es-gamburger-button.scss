@@ -1,0 +1,100 @@
+.es-gamburger-button {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: solid rem(3px) #ffffff;
+  border-radius: 100px;
+  box-shadow: none;
+  //font-size: 0;
+  //text-indent: -9999px;
+  appearance: none;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s;
+  outline: none;
+}
+
+.es-gamburger-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 60%;
+  height: rem(3px);
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s;
+}
+
+.es-gamburger-button span::before,
+.es-gamburger-button span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: rem(3px);
+  background-color: #ffffff;
+  transition: background 0.3s;
+}
+
+.es-gamburger-button span::before {
+  top: rem(-8px);
+}
+
+.es-gamburger-button span::after {
+  bottom: rem(-8px);
+}
+
+//анимация кнопки
+.es-gamburger-button {
+  //background-color: #ff3264;
+}
+
+.gumburger-button span {
+  transition: background 0s 0.3s;
+}
+
+.es-gamburger-button span::before,
+.es-gamburger-button span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.es-gamburger-button span::before {
+  transition-property: top, transform, background;
+}
+
+.es-gamburger-button span::after {
+  transition-property: bottom, transform, background;
+}
+
+/* состояние active при открытом меню  */
+.es-gamburger-button.is-active {
+  //background-color: white;
+}
+
+.es-gamburger-button.is-active span {
+  background: none;
+}
+
+.es-gamburger-button.is-active span::before {
+  top: 0;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.es-gamburger-button.is-active span::after {
+  bottom: 0;
+  background: white;
+  transform: rotate(-45deg);
+}
+
+.es-gamburger-button.is-active span::before,
+.es-gamburger-button.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}

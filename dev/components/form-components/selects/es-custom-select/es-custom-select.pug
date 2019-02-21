@@ -1,0 +1,8 @@
+block variables
+
+//mixin es-custom-select(customSelectFromContainer, customSelectClassModifier, selectID, selectClass, labelText, labelClass, selectPlaceholder)
+div(class="es-custom-select__container"+" "+customSelectFromContainer+" "+customSelectClassModifier)
+    label(class="es-custom-select__label"+" "+labelClass for=selectID)=labelText
+    select(class="custom-select"+" "+selectClass id=selectID name=selectName data-placeholder=selectPlaceholder)
+        block options
+    .es-custom-select__error-message

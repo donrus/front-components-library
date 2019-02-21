@@ -1,0 +1,9 @@
+include ../../../elements/images/es-img-png/es-img-png
+
+mixin es-badge(badgeClassFromContainer, badgeClassModifier, imgUrl, badgeHeader, badgeContent)
+    .es-badge(class=badgeClassFromContainer+" "+badgeClassModifier)
+        .es-badge__foto-container
+            +es-img-png("es-badge__foto", "", imgUrl, "Фотография на бейджике")
+        .es-badge__data-container
+            .es-badge__header=badgeHeader
+            .es-badge__content=badgeContent

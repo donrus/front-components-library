@@ -1,0 +1,22 @@
+extends ../../templates/components
+include ../../elements/buttons/es-simple-button/es-simple-button
+block variables
+    - var title = 'Test page for components'
+    - var pageClass = 'components-page'
+
+block content
+    h1 Каталог web-компонентов
+    section
+        h2.section-caption Кнопки
+        div.btn-container
+            label.component-name es-simple-button
+            +es-simple-button("button", "", "", "Кнопка с многострочным текстом")
+        div.btn-container
+            label.component-name es-simple-button--nowrap
+            +es-simple-button("button", "", "es-simple-button--nowrap", "Кнопка с однострочным текстом")
+        div.btn-container
+            label.component-name es-simple-button--transparent
+            +es-simple-button("button", "", "es-simple-button--transparent", "Кнопка с многострочным текстом")
+        div
+            label.component-name es-simple-button--wide
+            +es-simple-button("button", "", "es-simple-button--wide", "Кнопка с многострочным текстом")

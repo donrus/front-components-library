@@ -1,0 +1,4 @@
+mixin es-img-png(imgClassFromContainer, imgClassModifier, imgUrl, imgAlt)
+    picture
+        source(srcset=imgUrl)
+        img(class="es-img-png"+" "+imgClassFromContainer+" "+imgClassModifier src=imgUrl alt=imgAlt)

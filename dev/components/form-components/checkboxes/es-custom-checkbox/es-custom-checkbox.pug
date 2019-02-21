@@ -1,0 +1,8 @@
+mixin es-custom-checkbox(customCheckboxFromContainer, customCheckboxClassModifier, checkBoxID, checkBoxName, checkBoxValue, labelTextBeforeLink, labelTextAfterLink, linkUrl, linkText)
+    div(class="es-custom-checkbox__container"+" "+customCheckboxFromContainer+" "+customCheckboxClassModifier)
+        label.es-custom-checkbox__label
+            span.es-custom-checkbox__label-text=labelTextBeforeLink
+            a(href=linkUrl class="es-custom-checkbox__link" target="_blank")=linkText
+            span.es-custom-checkbox__label-text=labelTextAfterLink
+            input(type="checkbox" checked=true id=checkBoxID name=checkBoxName value=checkBoxValue).es-custom-checkbox__checkbox
+            .es-custom-checkbox__icon-container

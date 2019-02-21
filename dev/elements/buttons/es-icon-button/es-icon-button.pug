@@ -1,0 +1,4 @@
+mixin es-icon-button(iconButtonClassFromContainer, iconButtonClassModifier, iconUrl, buttonText)
+    div(class="es-icon-button"+" "+iconButtonClassFromContainer+" "+iconButtonClassModifier)
+        img(class="es-icon-button__icon" src=iconUrl alt="Стрелка указывает внутрь круга")
+        span(class="es-icon-button__text")=buttonText

@@ -1,0 +1,11 @@
+extends ../../templates/components
+include ../../elements/buttons/es-simple-button/es-simple-button
+
+block variables
+    - var title = 'Test page for components'
+    - var pageClass = 'components-page'
+
+block content
+    h1 Каталог web-компонентов
+    section
+        a(href='components-page.html').section-caption Компоненты

@@ -1,0 +1,5 @@
+mixin es-custom-textarea(customTextareaFromContainer, customTextareaClassModifier, textareaID, textareaName, textareaClass, labelText, textareaPlaceholder, labelClass)
+    div(class="es-custom-textarea__container"+" "+customTextareaFromContainer+" "+customTextareaClassModifier)
+        label(class="es-custom-textarea__label"+" "+labelClass for=textareaID)=labelText
+        textarea(class="es-custom-textarea__field"+" "+textareaClass id=textareaID name=textareaName placeholder=textareaPlaceholder)
+        .es-custom-textarea__error-message

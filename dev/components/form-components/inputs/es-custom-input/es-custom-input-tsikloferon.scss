@@ -1,0 +1,218 @@
+$mainColor: #ab0358;
+
+//input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected {
+//  background-color: white !important;
+//  background-image: none !important;
+//  color: rgb(0, 0, 0) !important;
+//}
+.input-main.es-custom-input__container {
+  margin-bottom : rem(10px);
+}
+.input-main {
+
+  .es-custom-input__label {
+    display : none;
+  }
+
+  .es-custom-input__field {
+    display          : block;
+    padding          : rem(5px) rem(45px);
+    width            : 100%;
+    height           : rem(85px);
+    border           : rem(5px) solid $mainColor;
+    border-radius    : rem(0px);
+    box-shadow       : none;
+    background-color : #ffffff;
+    font-family      : $mainFontRegular;
+    font-size        : rem(21px);
+    background-clip: padding-box;
+    line-height      : rem(75px);
+    color            : $mainColor;
+    transition       : border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip  : padding-box;
+
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+      border           : 0;
+      background-color : transparent;
+    }
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+      border-color     : lighten($mainColor, 25%);
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow       : none;
+      background-color : #ffffff;
+      color            : $mainColor;
+      outline          : 0;
+    }
+
+    // Placeholder
+    &::placeholder {
+      color   : $mainColor;
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity : 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+      background-color : lighten($mainColor, 70%);
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity          : 1;
+    }
+
+  }
+
+  .es-custom-input__field.invalid:not(:focus) {
+    //можно повесить иконку
+  }
+
+  .es-custom-input__field + .invalid {
+    display : none;
+  }
+
+  .es-custom-input__field.invalid + .invalid {
+    display      : block;
+    margin-top   : rem(10px);
+    padding-left : rem(45px);
+    font-family  : $mainFontLight;
+    font-size    : rem(14px);
+    text-align   : left;
+    color        : $mainColor;
+  }
+
+
+  .es-custom-input__error-message {
+    display      : none;
+    margin-top   : rem(10px);
+    padding-left : rem(25px);
+    font-family  : $mainFontLight;
+    font-size    : rem(14px);
+    text-align   : left;
+    color        : $mainColor;
+  }
+}
+
+.input-modifier.es-custom-input__container {
+  margin-bottom: rem(15px);
+}
+
+.input-modifier {
+  .es-custom-input__container {
+    margin-bottom: rem(10px);
+  }
+
+  .es-custom-input__label {
+    display: none;
+  }
+
+  .es-custom-input__field {
+    display: block;
+    padding: rem(0px) rem(25px);
+    //padding : 0px;
+    width: 100%;
+    height: rem(65px);
+    border: rem(0px) solid #ced4da;
+    border-radius: rem(7px);
+    box-shadow: 0 0rem 0.5rem rgba(#000000, .15);
+    background-color: #ffffff;
+    font-family: $mainFontLight;
+    font-size: rem(18px);
+    font-style: italic;
+    //line-height: rem(65px);
+    line-height: 100%;
+    color: #000000;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip: padding-box;
+
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+      border: 0;
+      background-color: transparent;
+    }
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+      border-color: lighten(#000000, 25%);
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: 0 .5rem 1rem rgba(#000000, .15), 0 0 0 0.2rem rgba($mainColor, .1);
+      background-color: #ffffff;
+      color: #000000;
+      outline: 0;
+    }
+
+    // Placeholder
+    &::placeholder {
+      color: #6c757d;
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+      background-color: #e9ecef;
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1;
+    }
+
+    &.invalid {
+      border: rem(3px) solid $mainColor;
+      box-shadow: none;
+    }
+  }
+
+  .es-custom-input__field.invalid:not(:focus){
+    //можно повесить иконку
+  }
+
+  .es-custom-input__field + .invalid{
+    display: none;
+  }
+
+  .es-custom-input__field.invalid + .invalid {
+    margin-top: rem(10px);
+    padding-right: rem(25px);
+    padding-left: rem(25px);
+    font-family: $mainFontLight;
+    font-size: rem(14px);
+    text-align: left;
+    color: $mainColor;
+  }
+
+
+
+  .es-custom-input__error-message {
+    display: none;
+    margin-top: rem(10px);
+    padding-left: rem(25px);
+    font-family: $mainFontLight;
+    font-size: rem(14px);
+    text-align: left;
+    color: $mainColor;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

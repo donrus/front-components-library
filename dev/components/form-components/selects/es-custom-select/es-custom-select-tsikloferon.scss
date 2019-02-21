@@ -1,0 +1,272 @@
+$mainColor: #ab0358;
+
+
+.es-custom-select__container {
+  margin-bottom: rem(10px);
+}
+
+.es-custom-select__label {
+  display: none;
+}
+
+.es-custom-select__field {
+  display: block;
+  padding: rem(5px) rem(45px);
+  width: 100%;
+  height: rem(85px);
+  border: rem(5px) solid $mainColor;
+  border-radius: rem(0px);
+  box-shadow: none;
+  background-color: #ffffff;
+  font-family: $mainFontRegular;
+  font-size: rem(21px);
+  line-height: rem(85px);
+  color: $mainColor;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  background-clip: padding-box;
+
+  //-webkit-appearance: none;
+  //-moz-appearance: none;
+  //appearance: none;
+  //
+  //background-image: url(../img/select-arrow.png);
+  //background-position : 97% center;
+  ////background-size: 30px 30px;
+  //background-repeat: no-repeat;
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    border: 0;
+    background-color: transparent;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    border-color: lighten($mainColor, 25%);
+    // Avoid using mixin so we can pass custom focus shadow properly
+    box-shadow: none;
+    background-color: #ffffff;
+    color: $mainColor;
+    outline: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: $mainColor;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $mainColor;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+}
+
+.custom-select-wrapper select.invalid:not(:focus){
+  //можно повесить иконку
+}
+
+.custom-select-wrapper select + .invalid{
+  display: none;
+}
+
+.custom-select-wrapper select.invalid + .invalid{
+  padding-left: rem(45px);
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
+}
+
+.es-custom-select__error-message {
+  display: none;
+  margin-top: rem(10px);
+  padding-left: rem(45px);
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
+}
+
+.select-modifier.es-custom-select__container {
+  margin-bottom: rem(15px);
+}
+
+.select-modifier {
+  .es-custom-select__field {
+    display: block;
+    padding: rem(5px) rem(25px);
+    width: 100%;
+    height: rem(65px);
+    border: rem(0px) solid #ced4da;
+    border-radius: rem(7px);
+    box-shadow: 0 0rem 0.5rem rgba(#000000, .15);
+    background-color: #ffffff;
+    font-family: $mainFontLight;
+    font-size: rem(18px);
+    font-style: italic;
+    line-height: rem(85px);
+    color: #000000;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip: padding-box;
+
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+      border: 0;
+      background-color: transparent;
+    }
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+      border-color: lighten(#000000, 25%);
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: 0 .5rem 1rem rgba(#000000, .15), 0 0 0 0.2rem rgba($mainColor, .1);
+      background-color: #ffffff;
+      color: #000000;
+      outline: 0;
+    }
+
+    // Placeholder
+    &::placeholder {
+      color: #6c757d;
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+      background-color: #e9ecef;
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1;
+    }
+
+    &.invalid {
+      border: rem(3px) solid $mainColor;
+      box-shadow: none;
+    }
+  }
+
+  .es-custom-select__error-message {
+    display: none;
+    margin-top: rem(10px);
+    padding-right: rem(25px);
+    padding-left: rem(25px);
+    font-family: $mainFontLight;
+    font-size: rem(14px);
+    text-align: left;
+    color: $mainColor;
+  }
+  .custom-select-wrapper select.invalid:not(:focus){
+    //можно повесить иконку
+  }
+
+  .custom-select-wrapper select + .invalid{
+    display: none;
+  }
+
+  .custom-select-wrapper select.invalid + .invalid{
+    padding-left: rem(16px);
+    font-family: $mainFontLight;
+    font-size: rem(14px);
+    text-align: left;
+    color: $mainColor;
+  }
+}
+
+.select-modifier-question {
+  .custom-select-trigger {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    padding-right: rem(16px);
+    padding-left: rem(45px);
+    height: rem(85px);
+    border: rem(5px) solid $mainColor;
+    border-radius: rem(0px);
+    box-shadow: none;
+    background-color: $mainColor;
+    font-family: $mainFontRegular;
+    font-size: rem(21px);
+    line-height: rem(80px);
+    color: #ffffff;
+  }
+
+  .custom-select-trigger::after {
+    content: "";
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%;
+    right: rem(15px);
+    margin-top: -3px;
+    width: 0.425rem;
+    height: 0.425rem;
+    border: rem(10px) solid transparent;
+    border-left: rem(10px) solid #ffffff;
+    transform: rotate(0deg) translateY(-50%);
+  }
+
+  .custom-select.opened .custom-select-trigger::after {
+    top: 50%;
+    right: rem(20px);
+    margin-top: 3px;
+    transform: rotate(90deg) translateY(-50%);
+  }
+
+  .custom-options {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    box-sizing: border-box;
+    display: none;
+    margin-top: 1.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: rem(0px);
+    min-width: 100%;
+    height: rem(220px);
+    border: rem(5px) solid $mainColor;
+    border-radius: 0px;
+    box-shadow: none;
+    background: $mainColor;
+    color: #ffffff;
+    opacity: 0;
+    overflow-y: auto;
+    visibility: hidden;
+    transform: translateY(-15px);
+    pointer-events: none;
+  }
+
+  .custom-option {
+    position: relative;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    //display: block
+    display: flex;
+    padding-left: rem(45px);
+    height: rem(42px);
+    border-bottom: 2px solid white;
+    //padding: 0 22px
+    //border-bottom: 1px solid #ade7f8;
+    font-family: $mainFontRegular;
+    font-size: rem(18px);
+    line-height: 1.3;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+  }
+}

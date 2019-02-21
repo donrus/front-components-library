@@ -1,0 +1,90 @@
+.es-custom-upload__container {
+  position: relative;
+  text-align: left;
+  cursor : pointer;
+  //padding: 10px;
+}
+
+.es-custom-upload__label {
+  font-family: $mainFontRegular;
+  font-size: rem(18px);
+  color: black;
+}
+
+.es-custom-upload__field {
+  //display: none;
+  height: 0px;
+  visibility: hidden;
+}
+
+.es-custom-upload__span {
+  font-family: $mainFontRegular;
+  font-size: rem(14px);
+  line-height: 1.2;
+  text-align: left;
+  color: #808080;
+  display: inline-block;
+  max-width: 66%;
+}
+
+.es-custom-upload-button {
+  position: absolute;
+  top: 13px;
+  right: 0%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: rem(5px);
+  border: 1px solid transparent;
+  //border-radius: .75rem;
+  background-color: #ab0358;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  color: #ffffff;
+  transform: translateY(-50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.es-custom-upload-button__icon {
+  margin-right: rem(10px);
+  width: rem(20px);
+  height: rem(20px);
+  object-fit: contain;
+  object-position: center;
+  font-family: "object-fit: contain; object-position: center;";
+}
+
+.es-custom-upload__error-message {
+  display: none;
+  margin-top: rem(5px);
+  padding-right: rem(25px);
+  padding-left: rem(25px);
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
+}
+
+
+.es-custom-upload__field.invalid:not(:focus){
+  //можно повесить иконку
+}
+
+.es-custom-upload__field + .invalid{
+  display: none;
+}
+
+.es-custom-upload__field.invalid + .invalid{
+  display: block;
+  margin-top: rem(10px);
+  padding-left: rem(25px);
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
+}
