@@ -1,0 +1,17 @@
+extends ../../templates/components
+
+include ../../elements/links/es-text-link/es-text-link
+
+block variables
+    - var title = 'Гиперссылки'
+    - var pageClass = 'links-page'
+
+block content
+    h1 Ссылки
+
+    section
+        h2.section-caption
+        .links-container
+            div.link-container
+                .component-name es-text-link
+                +es-text-link("#", "Текстовая ссылка","","")

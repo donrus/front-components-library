@@ -1,3 +1,8 @@
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
+
+$buttonColorStyle: #ab0358;
+
 .es-gamburger-button {
   position: relative;
   display: block;
@@ -5,12 +10,12 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  border: solid rem(3px) #ffffff;
+  border: solid rem(3px) $buttonColorStyle;
   border-radius: 100px;
   box-shadow: none;
   //font-size: 0;
   //text-indent: -9999px;
-  appearance: none;
+  //appearance: none;
   background: rgba(0, 0, 0, 0);
   cursor: pointer;
   overflow: hidden;
@@ -25,7 +30,7 @@
   display: block;
   width: 60%;
   height: rem(3px);
-  background: #ffffff;
+  background: $buttonColorStyle;
   transform: translate(-50%, -50%);
   transition: background 0.3s;
 }
@@ -38,7 +43,7 @@
   display: block;
   width: 100%;
   height: rem(3px);
-  background-color: #ffffff;
+  background-color: $buttonColorStyle;
   transition: background 0.3s;
 }
 
@@ -84,13 +89,13 @@
 
 .es-gamburger-button.is-active span::before {
   top: 0;
-  background: white;
+  background: $buttonColorStyle;
   transform: rotate(45deg);
 }
 
 .es-gamburger-button.is-active span::after {
   bottom: 0;
-  background: white;
+  background: $buttonColorStyle;
   transform: rotate(-45deg);
 }
 

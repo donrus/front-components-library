@@ -60,33 +60,33 @@
   }
 }
 
-.es-custom-textarea__field.invalid:not(:focus){
+.es-custom-textarea__field.invalid:not(:focus) {
   //можно повесить иконку
 }
 
-.es-custom-textarea__field + .invalid{
+.es-custom-textarea__field + .invalid {
   display: none;
 }
 
-.es-custom-textarea__field.invalid + .invalid{
-    margin-top: rem(10px);
-    padding-left: rem(45px);
-    font-family: $mainFontLight;
-    font-size: rem(14px);
-    text-align: left;
-    color: $mainColor;
+.es-custom-textarea__field.invalid + .invalid {
+  margin-top: rem(10px);
+  padding-left: rem(45px);
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
 }
 
 
 
 .es-custom-textarea__error-message {
-    display: none;
-    margin-top: rem(10px);
-    padding-left: rem(45px);
-    font-family: $mainFontLight;
-    font-size: rem(14px);
-    text-align: left;
-    color: $mainColor;
+  display: none;
+  margin-top: rem(10px);
+  padding-left: rem(45px);
+  font-family: $mainFontLight;
+  font-size: rem(14px);
+  text-align: left;
+  color: $mainColor;
 }
 
 .textarea-modifier.es-custom-textarea__container {
@@ -152,7 +152,7 @@
     }
   }
 
-  .es-custom-textarea__field.invalid + .invalid{
+  .es-custom-textarea__field.invalid + .invalid {
     margin-top: rem(10px);
     padding-right: rem(25px);
     padding-left: rem(25px);
@@ -161,6 +161,7 @@
     text-align: left;
     color: $mainColor;
   }
+
   .es-custom-textarea__error-message {
     margin-top: rem(10px);
     padding-right: rem(25px);

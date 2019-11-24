@@ -2,9 +2,9 @@ include ../../../elements/buttons/es-close-button/es-close-button
 
 block variables
 
-div(class="modal-container"+" "+modalContainerClass)
-    div(class="modal-background"+" "+modalBackgroundClass)
-        section(class="modal-section"+" "+modalSectionClass)
-            div(class="modal-close-button"+" "+modalCloseButtonClass)
+div(class="es-custom-modal__container"+" "+modalContainerClass)
+    div(class="es-custom-modal__background"+" "+modalBackgroundClass)
+        section(class="es-custom-modal__section"+" "+modalSectionClass)
+            div(class="es-custom-modal__close-button"+" "+modalCloseButtonClass)
                 +es-close-button("", "")
             block modalContent

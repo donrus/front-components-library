@@ -1,22 +1,29 @@
 extends ../../templates/components
-include ../../elements/buttons/es-simple-button/es-simple-button
+include ../../components/es-autorization-block/es-autorization-block
+include ../../components/es-radio-player/es-radio-player
+include ../../components/form-components/inputs/es-custom-input/es-custom-input
+
 block variables
-    - var title = 'Test page for components'
+    - var title = 'Функциональные компоненты'
     - var pageClass = 'components-page'
 
 block content
-    h1 Каталог web-компонентов
-    section
-        h2.section-caption Кнопки
-        div.btn-container
-            label.component-name es-simple-button
-            +es-simple-button("button", "", "", "Кнопка с многострочным текстом")
-        div.btn-container
-            label.component-name es-simple-button--nowrap
-            +es-simple-button("button", "", "es-simple-button--nowrap", "Кнопка с однострочным текстом")
-        div.btn-container
-            label.component-name es-simple-button--transparent
-            +es-simple-button("button", "", "es-simple-button--transparent", "Кнопка с многострочным текстом")
-        div
-            label.component-name es-simple-button--wide
-            +es-simple-button("button", "", "es-simple-button--wide", "Кнопка с многострочным текстом")
+    h1 Функциональные компоненты
+    .component-name es-autorization-block
+    .es-autorization-block__container
+        +es-autorization-block("", "")
+    br
+    .component-name es-radio-player
+    .es-radio-player__container
+            +es-radio-player("","")
+    br
+    div.input-container
+        .component-name air datepicker
+        +es-custom-input("input-name-container", "bootstrap-style", "text", "datetime", "date", "registration-form__input-name", "", "Дата", "registration-form__input-label")
+
+
+
+
+block script
+    script(src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.dev.js")

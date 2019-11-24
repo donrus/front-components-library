@@ -1,0 +1,17 @@
+extends ../../templates/components
+include ../../components/decoration-elements/es-jumping-ball/es-jumping-ball
+
+
+block variables
+    - var title = 'Летающие шарики'
+    - var pageClass = 'es-balls-page'
+
+block content
+    h1 Летающие шарики
+    .component-name es-jumping-ball
+    +es-jumping-ball("jumping-ball1","")
+    +es-jumping-ball("jumping-ball6","")
+    +es-jumping-ball("jumping-ball7","")
+    +es-jumping-ball("jumping-ball8","")
+
+

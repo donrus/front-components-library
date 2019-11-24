@@ -1,14 +1,19 @@
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
+
 .es-text-link {
   background-color: transparent;
+  font-family: $mainFontBold;
+  font-size: rem(16px);
   text-decoration: underline;
-  color: #ffffff;
+  color: deeppink;
 
   &:hover,
   &.hover {
     border-color: transparent;
     background-color: transparent;
     text-decoration: underline;
-    color: darken(#ffffff, 10);
+    color: darken(deeppink, 30);
   }
 
   &:focus,

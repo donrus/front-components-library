@@ -1,0 +1,13 @@
+extends ../../templates/components
+
+
+block variables
+    - var title = 'Компоненты меню'
+    - var pageClass = 'menus-page'
+
+block content
+    h1 Меню
+    .component-name es-menu
+    .es-menu__container.menu__tsikloferon-style
+        include ../../components/menus/es-menu/es-menu
+

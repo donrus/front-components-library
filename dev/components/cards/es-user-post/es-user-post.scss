@@ -1,4 +1,6 @@
-@import "../../../elements/images/es-img-png/es-img-png";
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
+
 
 .es-user-post__container {
   width: 100%;
@@ -53,7 +55,7 @@
 }
 
 .es-user-post__post-header {
-  font-family: $mainFontMedium;
+  font-family: $mainFontBold;
   font-size: rem(22px);
   line-height: 1.1;
   text-align: left;

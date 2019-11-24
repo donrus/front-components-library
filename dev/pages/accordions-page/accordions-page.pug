@@ -1,0 +1,18 @@
+extends ../../templates/components
+
+
+block variables
+    - var title = 'Аккордеоны'
+    - var pageClass = 'accordions-page'
+
+block content
+    h1 Аккордеоны
+    .component-name es-accordion
+    .es-accordion__container
+        include es-accordion-items
+
+    .component-name es-accordion-tsikloferon
+    .es-accordion-tsikloferon__container
+        include es-accordion-items
+
+

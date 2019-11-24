@@ -1,0 +1,16 @@
+extends ../../templates/components
+include ../../elements/buttons/es-simple-button/es-simple-button
+
+
+block variables
+    - var title = 'Модальные окна'
+    - var pageClass = 'modals-page'
+
+block content
+    include ../../components/modals/es-custom-modal/info-modal/info-modal
+    h1 Модальные окна
+    section
+        .buttons-container
+            div.btn-container
+                .component-name es-custom-modal
+                +es-simple-button("button", "es-simple-button__bootstrap-style", "es-custom-modal__button", "Показать модальное окно")

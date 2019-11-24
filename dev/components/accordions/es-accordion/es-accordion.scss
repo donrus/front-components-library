@@ -1,98 +1,94 @@
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
 
-.es-custom-accordion {
-  //max-width: 50rem;
+.es-accordion__container {
+  .es-custom-accordion {
+    //max-width: 50rem;
 
-  li {
-    position: relative;
-    padding-left: 40px;
-    border-bottom: rem(1px);
+    li {
+      position: relative;
+      padding-left: 40px;
+      border-bottom: rem(1px);
 
-    p {
-      padding-top: 0px;
-      padding-right: 25%;
-      padding-bottom: 10px;
-      //padding: 0.625rem 1.563rem 1.875rem;
-      padding-left: 0px;
-      text-align: left;
-      color: black;
+      p {
+        padding-top: 0px;
+        padding-right: 25%;
+        padding-bottom: 10px;
+        //padding: 0.625rem 1.563rem 1.875rem;
+        padding-left: 0px;
+        text-align: left;
+        color: black;
 
-      div {
-        a {
-          display: inline;
-          text-align: left;
-          text-decoration: underline;
+        div {
+          a {
+            display: inline;
+            text-align: left;
+            text-decoration: underline;
+          }
         }
       }
     }
-  }
 
-  li > a {
-    display: block;
-    width: 100%;
-    //font-family: BaronNeueBlack;
-    font-size: 17px;
-    line-height: 3;
-    //text-indent: 15px
-    text-align: left;
-    color: #051440;
-    cursor: pointer;
-    user-select: none;
+    li > a {
+      display: block;
+      width: 100%;
+      //font-family: BaronNeueBlack;
+      font-size: 17px;
+      line-height: 3;
+      //text-indent: 15px
+      text-align: left;
+      color: #051440;
+      cursor: pointer;
+      user-select: none;
 
-    &::after {
-      content: "";
-      position: absolute; /* Абсолютное позиционирование */
-      top: 1.45rem;
-      left: -0.15rem;
-      border: rem(10px) solid transparent;
-      border-left: rem(10px) solid #ab0358;
+
+      //плюсик
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 1.45rem;
+        left: -0.15rem;
+        width: 20px;
+        height: 8px;
+        border-bottom: 3px solid red;
+        transform: rotate(-90deg);
+        //transform: rotate(45deg);
+        transition: all 0.2s ease-in-out;
+      }
+
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 1.3rem;
+        left: 0rem;
+        width: 20px;
+        height: 8px;
+        border-bottom: 3px solid red;
+        //transform: rotate(45deg);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    p {
+      padding: 0.438rem;
+      font-size: 0.875rem;
+      line-height: 2;
     }
 
     //плюсик
-    //&::after {
-    //  content: " ";
-    //  position: absolute;
-    //  top: 1.45rem;
-    //  left: -0.15rem;
-    //  width: 20px;
-    //  height: 8px;
-    //  border-bottom: 3px solid red;
-    //  transform: rotate(-90deg);
-    //  //transform: rotate(45deg);
-    //  transition: all 0.2s ease-in-out;
-    //}
-    //
-    //&::before {
-    //  content: " ";
-    //  position: absolute;
-    //  top: 1.3rem;
-    //  left: 0rem;
-    //  width: 20px;
-    //  height: 8px;
-    //  border-bottom: 3px solid red;
-    //  //transform: rotate(45deg);
-    //  transition: all 0.2s ease-in-out;
-    //}
+    a.active::after {
+      top: 1.30rem;
+      left: 0.02rem;
+      transform: rotate(0deg);
+      transition: all 0.2s ease-in-out;
+    }
   }
 
-  p {
-    padding: 0.438rem;
-    font-size: 0.875rem;
-    line-height: 2;
+  .es-custom-accordion .es-accordion-link + .es-accordion-content {
+    height: 0px;
   }
 
-  //плюсик
-  a.active::after {
-    top: 1.30rem;
-    left: 0.02rem;
-    transform: rotate(0deg);
-    transition: all 0.2s ease-in-out;
+  .es-accordion-content {
+    overflow: hidden;
   }
-}
-
-.es-custom-accordion .es-accordion-link + .es-accordion-content {
-  height: 0px;
-}
-
-.es-accordion-content {
-  overflow: hidden;
 }

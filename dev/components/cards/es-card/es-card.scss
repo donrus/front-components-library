@@ -1,6 +1,12 @@
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
+
 .es-card {
+  padding: 20px;
   min-width: 150px;
   min-height: 360px;
+  border: 1px solid #ebebeb;
+  border-radius: 0.625rem;
   text-align: center;
 }
 
@@ -25,13 +31,13 @@
 
 .es-card__header {
   margin-bottom: rem(30px);
-  font-family: $mainFontMedium;
+  font-family: $mainFontBold;
   font-size: rem(31px);
-  color: #ffffff;
+  color: #000000;
 }
 
 .es-card__content {
   font-family: $mainFontLight;
   font-size: rem(22px);
-  color: #ffffff;
+  color: #000000;
 }

@@ -1,4 +1,5 @@
-@import "../../../elements/images/es-img-png/es-img-png";
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
 
 .es-badge {
   align-items: center;
@@ -31,20 +32,20 @@
   height: 100%;
 }
 
-.es-badge__data-container{
+.es-badge__data-container {
   //так не будет работать в IE
   //flex-basis: 65%;
   //для IE нужно так
   flex-basis: auto;
-  width: 65%;
 
   flex-grow: 0;
   flex-shrink: 0;
+  width: 65%;
 }
 
 .es-badge__header {
   margin-bottom: rem(15px);
-  font-family: $mainFontMedium;
+  font-family: $mainFontRegular;
   font-size: rem(15px);
   line-height: 1.1;
   text-align: left;
@@ -53,7 +54,7 @@
 }
 
 .es-badge__content {
-  font-family: $mainFontMedium;
+  font-family: $mainFontRegular;
   font-size: rem(22px);
   line-height: 1.1;
   text-align: left;

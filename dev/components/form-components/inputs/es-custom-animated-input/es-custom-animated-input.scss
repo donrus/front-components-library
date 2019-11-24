@@ -1,0 +1,527 @@
+@import "../../../../common/scss/mixins.scss";
+@import "../../../../common/scss/vars.scss";
+
+:focus {
+  outline: none;
+}
+
+.es-custom-animated-input__container {
+  position: relative;
+  float: left;
+  margin: 4px 3%;
+  margin-top : 15px;
+  width: 100%;
+}
+
+.es-custom-animated-input__field[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  letter-spacing: 1px;
+  color: #333333;
+  font: 15px/24px "Lato", Arial, sans-serif;
+}
+
+//нижняя граница появляется слева
+.input-border-bottom-from-left {
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.input-border-bottom-from-left ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+
+.input-border-bottom-from-left:focus ~ .es-custom-animated-input__focus-effects {
+  width: 100%;
+  transition: 0.4s;
+}
+
+//нижняя граница появляется с центра
+.input-border-bottom-from-center {
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.input-border-bottom-from-center ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+
+.input-border-bottom-from-center:focus ~ .es-custom-animated-input__focus-effects {
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+//нижняя граница появляется с боков
+.input-border-bottom-from-sides {
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.input-border-bottom-from-sides ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 2px;
+}
+
+.input-border-bottom-from-sides ~ .es-custom-animated-input__focus-effects::before,
+.input-border-bottom-from-sides ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+
+.input-border-bottom-from-sides ~ .es-custom-animated-input__focus-effects::after {
+  right: 0;
+  left: auto;
+}
+
+.input-border-bottom-from-sides:focus ~ .es-custom-animated-input__focus-effects::before,
+.input-border-bottom-from-sides:focus ~ .es-custom-animated-input__focus-effects::after {
+  width: 50%;
+  transition: 0.4s;
+}
+
+.input-borders-from-bottom,
+.input-borders-from-left,
+.input-borders-from-right {
+  padding: 5px 0 7px;
+  border: 0;
+  border: 1px solid transparent;
+  transition: 0.4s;
+  border-bottom-color: #cccccc;
+}
+
+//эффект появления рамок снизу, слева и справа
+.input-borders-from-bottom:focus,
+.input-borders-from-left:focus,
+.input-borders-from-right:focus {
+  padding: 5px 14px 7px;
+  transition: 0.4s;
+}
+
+.input-borders-from-bottom ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 0;
+  transition: 0.4s;
+}
+
+.input-borders-from-bottom:focus ~ .es-custom-animated-input__focus-effects {
+  z-index: 1;
+  height: 36px;
+  border: 2px solid #3399ff;
+  transition: 0.4s;
+}
+
+.input-borders-from-left ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 36px;
+  transition: 0.4s;
+}
+
+.input-borders-from-left:focus ~ .es-custom-animated-input__focus-effects {
+  width: 100%;
+  border: 2px solid #3399ff;
+  transition: 0.4s;
+}
+
+.input-borders-from-right ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 36px;
+  transition: 0.4s;
+}
+
+.input-borders-from-right:focus ~ .es-custom-animated-input__focus-effects {
+  width: 100%;
+  border: 2px solid #3399ff;
+  transition: 0.4s;
+}
+
+//эффекты ободки рамки инпута
+.input-borders-outline-from-center,
+.input-borders-outline-from-coners,
+.input-borders-outline-from-one-coner {
+  padding: 7px 14px 9px;
+  border: 1px solid #cccccc;
+  transition: 0.4s;
+}
+
+.input-borders-outline-from-center ~ .es-custom-animated-input__focus-effects::before,
+.input-borders-outline-from-center ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+
+.input-borders-outline-from-center ~ .es-custom-animated-input__focus-effects::after {
+  top: auto;
+  bottom: 0;
+}
+
+.input-borders-outline-from-center ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::before,
+.input-borders-outline-from-center ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
+  transition: 0.6s;
+}
+
+.input-borders-outline-from-center ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  right: 0;
+  left: auto;
+}
+
+.input-borders-outline-from-center:focus ~ .es-custom-animated-input__focus-effects::before,
+.input-borders-outline-from-center:focus ~ .es-custom-animated-input__focus-effects::after {
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.input-borders-outline-from-center:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::before,
+.input-borders-outline-from-center:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  top: 0;
+  height: 100%;
+  transition: 0.6s;
+}
+
+.input-borders-outline-from-coners ~ .es-custom-animated-input__focus-effects::before,
+.input-borders-outline-from-coners ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.3s;
+}
+
+.input-borders-outline-from-coners ~ .es-custom-animated-input__focus-effects::after {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.input-borders-outline-from-coners ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::before,
+.input-borders-outline-from-coners ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+
+.input-borders-outline-from-coners ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.input-borders-outline-from-coners:focus ~ .es-custom-animated-input__focus-effects::before,
+.input-borders-outline-from-coners:focus ~ .es-custom-animated-input__focus-effects::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.input-borders-outline-from-coners:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::before,
+.input-borders-outline-from-coners:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  height: 100%;
+  transition: 0.4s;
+}
+
+.input-borders-outline-from-one-coner ~ .es-custom-animated-input__focus-effects::before,
+.input-borders-outline-from-one-coner ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.input-borders-outline-from-one-coner ~ .es-custom-animated-input__focus-effects::after {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  transition-delay: 0.6s;
+}
+
+.input-borders-outline-from-one-coner ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::before,
+.input-borders-outline-from-one-coner ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
+  transition: 0.2s;
+}
+
+.input-borders-outline-from-one-coner ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  transition-delay: 0.4s;
+}
+
+.input-borders-outline-from-one-coner:focus ~ .es-custom-animated-input__focus-effects::before,
+.input-borders-outline-from-one-coner:focus ~ .es-custom-animated-input__focus-effects::after {
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
+}
+
+.input-borders-outline-from-one-coner:focus ~ .es-custom-animated-input__focus-effects::after {
+  transition-delay: 0.2s;
+}
+
+.input-borders-outline-from-one-coner:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::before,
+.input-borders-outline-from-one-coner:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  height: 100%;
+  transition: 0.2s;
+}
+
+.input-borders-outline-from-one-coner:focus ~ .es-custom-animated-input__focus-effects .es-custom-animated-input__focus-effects-helper::after {
+  transition-delay: 0.4s;
+}
+
+
+//эффект анимации фона при фокусе
+.input-bg-fade,
+.input-bg-from-left,
+.input-bg-from-center,
+.input-bg-from-sides,
+.input-bg-from-coners,
+.input-bg-from-center-point {
+  position: relative;
+  padding: 7px 15px;
+  border: 0;
+  border: 1px solid #cccccc;
+  background: transparent;
+}
+
+.input-bg-fade ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #ededed;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.input-bg-fade:focus ~ .es-custom-animated-input__focus-effects {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.input-bg-from-left ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: #ededed;
+  transition: 0.3s;
+}
+
+.input-bg-from-left:focus ~ .es-custom-animated-input__focus-effects {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.input-bg-from-center ~ .es-custom-animated-input__focus-effects {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: #ededed;
+  transition: 0.3s;
+}
+
+.input-bg-from-center:focus ~ .es-custom-animated-input__focus-effects {
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.input-bg-from-sides ~ .es-custom-animated-input__focus-effects::before,
+.input-bg-from-sides ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: #ededed;
+  transition: 0.3s;
+}
+
+.input-bg-from-sides:focus ~ .es-custom-animated-input__focus-effects::before {
+  width: 50%;
+  transition: 0.3s;
+}
+
+.input-bg-from-sides ~ .es-custom-animated-input__focus-effects::after {
+  right: 0;
+  left: auto;
+}
+
+.input-bg-from-sides:focus ~ .es-custom-animated-input__focus-effects::after {
+  width: 50%;
+  transition: 0.3s;
+}
+
+.input-bg-from-coners ~ .es-custom-animated-input__focus-effects::before,
+.input-bg-from-coners ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  background-color: #ededed;
+  transition: 0.3s;
+}
+
+.input-bg-from-coners:focus ~ .es-custom-animated-input__focus-effects::before {
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.input-bg-from-coners ~ .es-custom-animated-input__focus-effects::after {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.input-bg-from-coners:focus ~ .es-custom-animated-input__focus-effects::after {
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.input-bg-from-center-point ~ .es-custom-animated-input__focus-effects::before,
+.input-bg-from-center-point ~ .es-custom-animated-input__focus-effects::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  background-color: #ededed;
+  transition: 0.3s;
+}
+
+.input-bg-from-center-point:focus ~ .es-custom-animated-input__focus-effects::before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.input-bg-from-center-point ~ .es-custom-animated-input__focus-effects::after {
+  top: auto;
+  right: 50%;
+  bottom: 50%;
+  left: auto;
+}
+
+.input-bg-from-center-point:focus ~ .es-custom-animated-input__focus-effects::after {
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+//эффект плавающего лэйбла
+
+.input-floating-label{
+  background-color : rgba(#fff,0);
+}
+
+.input-floating-label ~ .es-custom-animated-input__label {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  z-index: -1;
+  width: 100%;
+  letter-spacing: 0.5px;
+  color: #aaaaaa;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.input-floating-label:focus ~ .es-custom-animated-input__label,
+.input-has-content.input-floating-label ~ .es-custom-animated-input__label {
+  top: -16px;
+  font-size: 12px;
+  color: #3399ff;
+  transition: 0.3s;
+}

@@ -1,0 +1,55 @@
+@import "../../common/scss/mixins.scss";
+@import "../../common/scss/vars.scss";
+
+body {
+  padding: 30px;
+  height: 1000px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.component-name {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.jumping-ball1 {
+  top: 80px;
+  left: 12%;
+  z-index: -1;
+  width: rem(400px);
+  height: rem(400px);
+  background-image: url("./ball-1.png");
+}
+
+.jumping-ball6 {
+  top: 200px;
+  right: 15%;
+  z-index: 1;
+  width: rem(560px);
+  height: rem(560px);
+  background-image: url("./ball-6.png");
+}
+
+.jumping-ball7 {
+  top: 400px;
+  left: 20%;
+  z-index: 1;
+  width: rem(800px);
+  height: rem(800px);
+  background-image: url("./ball-7.png");
+}
+
+.jumping-ball8 {
+  top: 500px;
+  right: 23%;
+  z-index: 1;
+  width: rem(1000px);
+  height: rem(1000px);
+  background-image: url("./ball-8.png");
+}

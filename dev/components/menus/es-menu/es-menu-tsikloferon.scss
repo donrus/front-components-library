@@ -1,0 +1,167 @@
+@import "../../../common/scss/mixins.scss";
+@import "../../../common/scss/vars.scss";
+
+$borderColor: #ab0358;
+
+.menu__tsikloferon-style {
+  .es-main-menu {
+    margin: 25px auto 0 auto;
+    width: 1278px;
+  }
+
+  .es-menu-component {
+    flex-flow: row wrap;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .es-menu-element {
+    list-style-type: none;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  .es-menu-element a {
+    display: block;
+    width: 100%;
+    height: 37px;
+    border-top: 2px solid $borderColor;
+    border-bottom: 2px solid $borderColor;
+    line-height: 33px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $borderColor;
+  }
+
+  .es-menu-element:first-child a {
+    border-left: 2px solid $borderColor;
+    border-radius: 17px 0 0 17px;
+  }
+
+  .es-menu-element:last-child a {
+    border-right: 2px solid $borderColor;
+    border-radius: 0 17px 17px 0;
+  }
+
+  .es-menu-element-selected a {
+    background-color: $borderColor;
+    color: white;
+  }
+
+  .es-menu-element a:hover {
+    background-color: $borderColor;
+    color: white;
+  }
+
+  .es-menu-element a:active {
+    background-color: $borderColor;
+    color: white;
+  }
+
+
+
+  @media screen and (max-width: 1280px) {
+    .es-main-menu {
+      padding: 0 5px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .es-main-menu {
+      padding: 0;
+    }
+
+    .es-menu-component::before,
+    .es-menu-component::after {
+      content: "";
+      order: 1;
+      width: 100%;
+    }
+
+    .es-menu-element:first-child a,
+    .es-menu-element:last-child a {
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+    }
+
+    .es-menu-element:nth-child(n + 5) a {
+      border-top: 0;
+    }
+
+    .es-menu-element:nth-child(n + 5) {
+      order: 1;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .es-main-menu {
+      position: fixed;
+      top: 85px;
+      right: 0;
+      //display  : none;
+      margin: 0 0 0 auto;
+      width: 375px;
+      height: 1px;
+    }
+
+    .es-main-menu-show {
+      z-index: 5;
+      display: block;
+    }
+
+    .es-menu-component {
+      display: block;
+    }
+
+    .es-menu-component::before,
+    .es-menu-component::after {
+      content: none;
+    }
+
+    .es-menu-element {
+      margin: 0;
+      padding: 0;
+      height: 57px;
+      border: 0;
+    }
+
+
+    .es-menu-element:nth-child(n) a {
+      padding-right: 34px;
+      height: 58px;
+      border: 0;
+      font-size: 20.5px;
+      line-height: 58px;
+      text-align: right;
+      color: white;
+    }
+
+    .es-menu-element a {
+      background-color: #d7235f;
+    }
+
+    .es-menu-element-selected a {
+      background-color: #ab0358;
+    }
+
+    .es-menu-element a:hover {
+      background-color: lighten(#d7235f, 15%);
+    }
+
+    .es-menu-element a:active {
+      background-color: darken(#d7235f, 15%);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .es-main-menu {
+      width: 100%;
+    }
+  }
+}

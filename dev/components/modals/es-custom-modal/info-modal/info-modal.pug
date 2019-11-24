@@ -1,0 +1,12 @@
+extends ../es-custom-modal
+include ../../../../elements/buttons/es-simple-button/es-simple-button
+
+block variables
+    - var modalContainerClass = 'modal-container__info'
+    - var modalBackgroundClass = 'modal-background__info'
+    - var modalSectionClass = 'modal-section__info'
+    - var modalCloseButtonClass = 'modal-close-button__info'
+
+block modalContent
+    .info-modal__message Тестовое информационное модальное окно на базе компонента es-custom-modal!
+    +es-simple-button("button", "info__ok-button", "es-simple-button__tsikloferon-style", "ОК")

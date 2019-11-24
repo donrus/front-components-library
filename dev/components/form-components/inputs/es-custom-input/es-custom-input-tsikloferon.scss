@@ -1,3 +1,6 @@
+@import "../../../../common/scss/mixins.scss";
+@import "../../../../common/scss/vars.scss";
+
 $mainColor: #ab0358;
 
 //input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected {
@@ -5,53 +8,53 @@ $mainColor: #ab0358;
 //  background-image: none !important;
 //  color: rgb(0, 0, 0) !important;
 //}
-.input-main.es-custom-input__container {
-  margin-bottom : rem(10px);
+.tsikloferon-style__feedback-form.es-custom-input__container {
+  margin-bottom: rem(10px);
 }
-.input-main {
 
+.tsikloferon-style__feedback-form {
   .es-custom-input__label {
-    display : none;
+    display: none;
   }
 
   .es-custom-input__field {
-    display          : block;
-    padding          : rem(5px) rem(45px);
-    width            : 100%;
-    height           : rem(85px);
-    border           : rem(5px) solid $mainColor;
-    border-radius    : rem(0px);
-    box-shadow       : none;
-    background-color : #ffffff;
-    font-family      : $mainFontRegular;
-    font-size        : rem(21px);
+    display: block;
+    padding: rem(5px) rem(45px);
+    width: 100%;
+    height: rem(85px);
+    border: rem(5px) solid $mainColor;
+    border-radius: rem(0px);
+    box-shadow: none;
+    background-color: #ffffff;
+    font-family: $mainFontRegular;
+    font-size: rem(21px);
     background-clip: padding-box;
-    line-height      : rem(75px);
-    color            : $mainColor;
-    transition       : border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    background-clip  : padding-box;
+    line-height: rem(75px);
+    color: $mainColor;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip: padding-box;
 
     // Unstyle the caret on `<select>`s in IE10+.
     &::-ms-expand {
-      border           : 0;
-      background-color : transparent;
+      border: 0;
+      background-color: transparent;
     }
 
     // Customize the `:focus` state to imitate native WebKit styles.
     &:focus {
-      border-color     : lighten($mainColor, 25%);
+      border-color: lighten($mainColor, 25%);
       // Avoid using mixin so we can pass custom focus shadow properly
-      box-shadow       : none;
-      background-color : #ffffff;
-      color            : $mainColor;
-      outline          : 0;
+      box-shadow: none;
+      background-color: #ffffff;
+      color: $mainColor;
+      outline: 0;
     }
 
     // Placeholder
     &::placeholder {
-      color   : $mainColor;
+      color: $mainColor;
       // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-      opacity : 1;
+      opacity: 1;
     }
 
     // Disabled and read-only inputs
@@ -61,11 +64,10 @@ $mainColor: #ab0358;
     // don't honor that edge case; we style them as disabled anyway.
     &:disabled,
     &[readonly] {
-      background-color : lighten($mainColor, 70%);
+      background-color: lighten($mainColor, 70%);
       // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-      opacity          : 1;
+      opacity: 1;
     }
-
   }
 
   .es-custom-input__field.invalid:not(:focus) {
@@ -73,36 +75,36 @@ $mainColor: #ab0358;
   }
 
   .es-custom-input__field + .invalid {
-    display : none;
+    display: none;
   }
 
   .es-custom-input__field.invalid + .invalid {
-    display      : block;
-    margin-top   : rem(10px);
-    padding-left : rem(45px);
-    font-family  : $mainFontLight;
-    font-size    : rem(14px);
-    text-align   : left;
-    color        : $mainColor;
+    display: block;
+    margin-top: rem(10px);
+    padding-left: rem(45px);
+    font-family: $mainFontLight;
+    font-size: rem(14px);
+    text-align: left;
+    color: $mainColor;
   }
 
 
   .es-custom-input__error-message {
-    display      : none;
-    margin-top   : rem(10px);
-    padding-left : rem(25px);
-    font-family  : $mainFontLight;
-    font-size    : rem(14px);
-    text-align   : left;
-    color        : $mainColor;
+    display: none;
+    margin-top: rem(10px);
+    padding-left: rem(25px);
+    font-family: $mainFontLight;
+    font-size: rem(14px);
+    text-align: left;
+    color: $mainColor;
   }
 }
 
-.input-modifier.es-custom-input__container {
+.tsikloferon-style.es-custom-input__container {
   margin-bottom: rem(15px);
 }
 
-.input-modifier {
+.tsikloferon-style {
   .es-custom-input__container {
     margin-bottom: rem(10px);
   }
@@ -171,11 +173,11 @@ $mainColor: #ab0358;
     }
   }
 
-  .es-custom-input__field.invalid:not(:focus){
+  .es-custom-input__field.invalid:not(:focus) {
     //можно повесить иконку
   }
 
-  .es-custom-input__field + .invalid{
+  .es-custom-input__field + .invalid {
     display: none;
   }
 
@@ -190,7 +192,6 @@ $mainColor: #ab0358;
   }
 
 
-
   .es-custom-input__error-message {
     display: none;
     margin-top: rem(10px);
@@ -200,19 +201,4 @@ $mainColor: #ab0358;
     text-align: left;
     color: $mainColor;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

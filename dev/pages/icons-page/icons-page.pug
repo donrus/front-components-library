@@ -1,0 +1,17 @@
+extends ../../templates/components
+include ../../elements/icons/es-icon-png/es-icon-png
+
+
+block variables
+    - var title = 'Иконки'
+    - var pageClass = 'icons-page'
+
+block content
+    h1 Иконки
+
+    section
+        h2.section-caption
+        .icons-container
+            div.icon-container
+                .component-name es-icon-png
+                +es-icon-png("components-page__es-icon-png","")

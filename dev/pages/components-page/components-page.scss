@@ -1,5 +1,52 @@
-.btn-container{
-  display: inline-block;
-  width: 200px;
-  margin : 20px;
+@import "../../common/scss/mixins.scss";
+@import "../../common/scss/vars.scss";
+
+body {
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.component-name {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 300px;
+  text-align: center;
+  //margin-left : 10px;
+}
+
+.es-autorization-block__container {
+  justify-content: flex-end;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+  background-color: lightgray;
+}
+
+.es-radio-player__container {
+  justify-content: flex-start;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+  background-color: lightgray;
+}
+
+.input-container {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+  min-width: 200px;
+  text-align: center;
 }

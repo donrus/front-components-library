@@ -1,0 +1,18 @@
+extends ../../templates/components
+
+include ../../elements/logo/es-logo-png/es-logo-png
+
+block variables
+    - var title = 'Логотипы'
+    - var pageClass = 'logos-page'
+
+block content
+    h1 Логотипы
+
+    section
+        h2.section-caption
+        .logos-container
+            div.logo-container
+                .component-name es-logo-png
+                .es-logo-png__container
+                    +es-logo-png("", "")

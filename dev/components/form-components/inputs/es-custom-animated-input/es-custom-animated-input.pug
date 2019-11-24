@@ -1,0 +1,7 @@
+mixin es-custom-animated-input(customInputFromContainer, customInputClassModifier, inputType, inputID, inputName, inputClass, inputEffect, labelText, inputPlaceholder, labelClass)
+    div(class="es-custom-animated-input__container"+" "+customInputFromContainer+" "+customInputClassModifier)
+        input(class="es-custom-animated-input__field"+" "+inputClass+" "+inputEffect type=inputType id=inputID name=inputName placeholder=inputPlaceholder)
+        label(class="es-custom-animated-input__label"+" "+labelClass for=inputID)=labelText
+        span(class="es-custom-animated-input__focus-effects")
+            span(class="es-custom-animated-input__focus-effects-helper")
+        .es-custom-animated-input__error-message

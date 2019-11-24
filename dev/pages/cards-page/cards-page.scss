@@ -1,0 +1,47 @@
+@import "../../common/scss/mixins.scss";
+@import "../../common/scss/vars.scss";
+
+body {
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+
+.component-name {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  max-width: 300px;
+  text-align: center;
+  //margin-left : 10px;
+}
+
+.es-badge__container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(380px);
+}
+
+.es-card__container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(360px);
+}
+
+.cards-page__card {
+  padding-right: rem(30px);
+  padding-left: rem(30px);
+  max-width: rem(360px);
+}
+
+.es-user-post__container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(600px);
+}

@@ -1,0 +1,49 @@
+@import "../../common/scss/mixins.scss";
+@import "../../common/scss/vars.scss";
+
+body {
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.icons-container {
+  flex-wrap: wrap;
+  display: flex;
+  //justify-content: space-between;
+}
+
+.icon-container {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 30px;
+  //display: flex;
+  //flex-wrap: wrap;
+  //justify-content: center;
+  //align-items: flex-start;
+  min-width: 200px;
+  text-align: center;
+}
+
+.component-name {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 300px;
+  text-align: center;
+  //margin-left : 10px;
+}
+
+.components-page__es-icon-png {
+  width: rem(40px);
+  height: rem(40px);
+  background-color: red;
+}

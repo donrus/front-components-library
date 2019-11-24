@@ -1,0 +1,16 @@
+extends ../../templates/components
+include ../../elements/buttons/es-simple-button/es-simple-button
+
+
+block variables
+    - var title = 'Лоадеры'
+    - var pageClass = 'loaders-page'
+
+block content
+    include ../../components/indicators/loaders/es-rotate-cube-loader/es-rotate-cube-loader
+    h1 Лоадеры
+    section
+        .buttons-container
+            div.btn-container
+                .component-name es-rotate-cube-loader
+                +es-simple-button("button", "es-simple-button__bootstrap-style", "es-rotate-cube-loader__button", "Показать лоадер")

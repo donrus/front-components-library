@@ -8,7 +8,14 @@ module.exports = function(paths) {
           use: [
             'style-loader',
             'css-loader',
-            'sass-loader',
+            'resolve-url-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                sourceMapContents: false,
+              },
+            },
           ],
         },
       ],

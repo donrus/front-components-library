@@ -1,0 +1,39 @@
+extends ../../templates/components
+include ../../elements/buttons/es-simple-button/es-simple-button
+include ../../elements/buttons/es-icon-button/es-icon-button
+include ../../elements/buttons/es-gamburger-button/es-gamburger-button
+include ../../elements/buttons/es-close-button/es-close-button
+
+block variables
+    - var title = 'Кнопки'
+    - var pageClass = 'buttons-page'
+
+block content
+    h1 Кнопки
+    section
+        .buttons-container
+            div.btn-container
+                .component-name es-simple-button__bootstrap-style
+                +es-simple-button("button", "es-simple-button__bootstrap-style", "", "Кнопка")
+
+            div.btn-container
+                .component-name es-simple-button__tsikloferon-style
+                +es-simple-button("button", "es-simple-button__tsikloferon-style", "", "Кнопка")
+
+            div.btn-container
+                .component-name es-simple-button__tsikloferon-style-write-post
+                +es-simple-button("button", "es-simple-button__tsikloferon-style-write-post", "", "Кнопка")
+
+            div.btn-container
+                .component-name es-icon-button__tsikloferon-style
+                +es-icon-button("es-icon-button__tsikloferon-style","","./images/icon-enter.png", "")
+
+            div.btn-container
+                .component-name es-gamburger-button
+                .es-gamburger-button__container
+                    +es-gamburger-button("", "")
+
+            div.btn-container
+                .component-name es-close-button
+                .es-close-button__container
+                    +es-close-button("", "")

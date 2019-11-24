@@ -1,0 +1,21 @@
+extends ../../templates/components
+include ../../components/cards/es-badge/es-badge
+include ../../components/cards/es-card/es-card
+include ../../components/cards/es-user-post/es-user-post
+
+
+block variables
+    - var title = 'Карточки'
+    - var pageClass = 'cards-page'
+
+block content
+    h1 Карточки
+    .component-name es-badge
+    .es-badge__container
+        +es-badge("", "", "./images/slide-foto.png", "Ваш пост", "Напишите пост и получите приз...")
+    .component-name es-card
+    .es-card__container
+        +es-card("cards-page__card", "", "./images/write-post.png", "Напиши пост", "Напиши пост о том, что значит быть умным родителем")
+    .component-name es-user-post
+    .es-user-post__container
+        +es-user-post("post-modal__post-container", "", "./images/user-avatar.png", "./images/user-post.jpg", "Анфиса Рябчикова", "Что такое умный родитель")

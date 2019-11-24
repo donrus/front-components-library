@@ -1,0 +1,19 @@
+extends ./es-custom-select
+
+block variables
+    - var customSelectFromContainer = ''
+    - var customSelectClassModifier = 'es-custom-select__tsikloferon-style'
+    - var selectID = 'questionTopic'
+    - var selectName = 'subject_id'
+    - var selectClass = 'ask-question-form__select-question-topic'
+    - var labelText = ''
+    - var labelClass = 'ask-question-form__select-question-topic-label'
+    - var selectPlaceholder = 'Тема обращения'
+
+block options
+    option(value="") Тема обращения
+    option(value="1") Регистрация
+    option(value="2") Промо-пост
+    option(value="3") Получение призов
+    option(value="4") Работа сайта
+    option(value="5") Другое

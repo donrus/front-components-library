@@ -1,0 +1,99 @@
+extends ../../templates/components
+include ../../components/form-components/inputs/es-custom-input/es-custom-input
+include ../../components/form-components/inputs/es-custom-animated-input/es-custom-animated-input
+include ../../components/form-components/checkboxes/es-custom-checkbox/es-custom-checkbox
+
+
+block variables
+    - var title = 'Элементы форм'
+    - var pageClass = 'form-elements-page'
+
+block content
+    h1 Элементы форм
+    section
+        h2 Поля ввода
+        .inputs-container
+            div.input-container
+                .component-name es-custom-input__tsikloferon-style__feedback-form
+                +es-custom-input("input-name-container", "tsikloferon-style__feedback-form", "text", "registrationName", "name", "registration-form__input-name", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-input__tsikloferon-style
+                +es-custom-input("input-name-container", "tsikloferon-style", "text", "registrationName", "name", "registration-form__input-name", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-input__bootstrap-style
+                +es-custom-input("input-name-container", "bootstrap-style", "text", "registrationName", "name", "registration-form__input-name", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-input__digital-easy-style
+                +es-custom-input("input-name-container", "digital-easy-style", "text", "registrationName", "name", "registration-form__input-name", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__border-bottom-from-left
+                +es-custom-animated-input("es-custom-animated-input__border-bottom-from-left", "", "text", "registrationName", "name", "registration-form__input-name", "input-border-bottom-from-left", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__border-bottom-from-center
+                +es-custom-animated-input("es-custom-animated-input__border-bottom-from-center", "", "text", "registrationName", "name", "registration-form__input-name", "input-border-bottom-from-center", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__border-bottom-from-sides
+                +es-custom-animated-input("es-custom-animated-input__border-bottom-from-sides", "", "text", "registrationName", "name", "registration-form__input-name", "input-border-bottom-from-sides", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__borders-from-bottom
+                +es-custom-animated-input("es-custom-animated-input__borders-from-bottom", "", "text", "registrationName", "name", "registration-form__input-name", "input-borders-from-bottom", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__borders-from-left
+                +es-custom-animated-input("es-custom-animated-input__borders-from-left", "", "text", "registrationName", "name", "registration-form__input-name", "input-borders-from-left", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__borders-from-right
+                +es-custom-animated-input("es-custom-animated-input__borders-from-right", "", "text", "registrationName", "name", "registration-form__input-name", "input-borders-from-right", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__borders-outline-from-center
+                +es-custom-animated-input("es-custom-animated-input__borders-outline-from-center", "", "text", "registrationName", "name", "registration-form__input-name", "input-borders-outline-from-center", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__borders-outline-from-coners
+                +es-custom-animated-input("es-custom-animated-input__borders-outline-from-coners", "", "text", "registrationName", "name", "registration-form__input-name", "input-borders-outline-from-coners", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__borders-outline-from-one-coner
+                +es-custom-animated-input("es-custom-animated-input__borders-outline-from-one-coner", "", "text", "registrationName", "name", "registration-form__input-name", "input-borders-outline-from-one-coner", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__bg-fade
+                +es-custom-animated-input("es-custom-animated-input__bg-fade", "", "text", "registrationName", "name", "registration-form__input-name", "input-bg-fade", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__bg-from-left
+                +es-custom-animated-input("es-custom-animated-bg-from-left", "", "text", "registrationName", "name", "registration-form__input-name", "input-bg-from-left", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__bg-from-center
+                +es-custom-animated-input("es-custom-animated-input__bg-from-center", "", "text", "registrationName", "name", "registration-form__input-name", "input-bg-from-center", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__bg-from-sides
+                +es-custom-animated-input("es-custom-animated-input__bg-from-sides", "", "text", "registrationName", "name", "registration-form__input-name", "input-bg-from-sides", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__bg-from-coners
+                +es-custom-animated-input("es-custom-animated-input__bg-from-coners", "", "text", "registrationName", "name", "registration-form__input-name", "input-bg-from-coners", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__bg-from-center
+                +es-custom-animated-input("es-custom-animated-input__bg-from-center", "", "text", "registrationName", "name", "registration-form__input-name", "input-bg-from-center-point", "", "Ваше имя", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__floating-label
+                +es-custom-animated-input("es-custom-animated-input__floating-label", "", "text", "registrationName", "name", "registration-form__input-name", "input-floating-label", "Имя", "", "registration-form__input-label")
+            div.input-container
+                .component-name es-custom-animated-input__mixed-effects
+                +es-custom-animated-input("es-custom-animated-input__mixed-effects", "", "text", "registrationName", "name", "registration-form__input-name", "input-floating-label input-bg-from-center input-borders-from-right", "Имя", "", "registration-form__input-label")
+
+
+
+        h2 Чекбоксы
+        .inputs-container
+            div.input-container
+                .component-name es-custom-checkbox__tsikloferon-style
+                +es-custom-checkbox("rules-checkbox", "es-custom-checkbox__tsikloferon-style", "rulesCheckbox", "personal_data_processing", "1", "Согласен с правилами", "", "http://www.europaplus.ru/index.php?go=Content&id=1793", " обработки и хранения данных")
+            div.input-container
+                .component-name es-rubber-checkbox
+                include ../../components/form-components/checkboxes/es-rubber-checkbox/es-rubber-checkbox
+
+
+        h2 Селекты
+        .inputs-container
+            div.input-container
+                .component-name es-custom-select__tsikloferon-style-feedback
+                include ../../components/form-components/selects/es-custom-select/tsikloferon-style-feedback
+            div.input-container
+                .component-name es-custom-select__tsikloferon-style
+                include ../../components/form-components/selects/es-custom-select/tsikloferon-style

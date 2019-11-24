@@ -1,0 +1,7 @@
+mixin animalChange(data)
+    label Тип питомца
+    .animal__change.js-select-animal
+        input(type="text" name="PetType" value=data.default disabled=data.disabled)
+        .animal__change--dog(class= data.default === "dog" ? 'active' : '' data-value="dog") Собака
+        .animal__change--cat(class= data.default === "cat" ? 'active' : '' data-value="cat") Кошка
+        

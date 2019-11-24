@@ -1,0 +1,1 @@
+import './es-rubber-checkbox.scss';

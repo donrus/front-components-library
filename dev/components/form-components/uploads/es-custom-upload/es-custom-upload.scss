@@ -1,7 +1,7 @@
 .es-custom-upload__container {
   position: relative;
   text-align: left;
-  cursor : pointer;
+  cursor: pointer;
   //padding: 10px;
 }
 
@@ -18,13 +18,13 @@
 }
 
 .es-custom-upload__span {
+  display: inline-block;
+  max-width: 66%;
   font-family: $mainFontRegular;
   font-size: rem(14px);
   line-height: 1.2;
   text-align: left;
   color: #808080;
-  display: inline-block;
-  max-width: 66%;
 }
 
 .es-custom-upload-button {
@@ -71,15 +71,15 @@
 }
 
 
-.es-custom-upload__field.invalid:not(:focus){
+.es-custom-upload__field.invalid:not(:focus) {
   //можно повесить иконку
 }
 
-.es-custom-upload__field + .invalid{
+.es-custom-upload__field + .invalid {
   display: none;
 }
 
-.es-custom-upload__field.invalid + .invalid{
+.es-custom-upload__field.invalid + .invalid {
   display: block;
   margin-top: rem(10px);
   padding-left: rem(25px);

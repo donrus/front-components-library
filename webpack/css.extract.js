@@ -47,7 +47,16 @@ module.exports = function(paths) {
                 },
               },
             },
-            'sass-loader',
+            {
+              loader: 'resolve-url-loader',
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                sourceMapContents: false,
+              },
+            },
           ],
         },
       ],
