@@ -2,33 +2,215 @@ body {
   padding: 30px; }
 
 h1 {
-  text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-align: center; }
 
 h2 {
   text-align: center; }
 
 .buttons-container {
-  display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  display: flex; }
 
 .btn-container {
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
-  min-width: 200px;
   margin: 30px;
+  min-width: 200px;
   text-align: center; }
 
 .component-name {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   max-width: 300px;
   text-align: center; }
 
 .es-gamburger-button__container {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   width: 3.125rem;
   height: 3.125rem; }
+
+
+.es-icon-button__tsikloferon-style {
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 0.625rem;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  background-color: #ab0358;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  color: #ffffff;
+  user-select: none; }
+  .es-icon-button__tsikloferon-style:hover, .es-icon-button__tsikloferon-style:focus {
+    text-decoration: none; }
+  .es-icon-button__tsikloferon-style:focus, .es-icon-button__tsikloferon-style.es-focus {
+    box-shadow: 0 0 0 0.1rem rgba(171, 3, 88, 0.25);
+    outline: 0; }
+  .es-icon-button__tsikloferon-style.es-disabled, .es-icon-button__tsikloferon-style:disabled {
+    box-shadow: none;
+    opacity: .65; }
+  .es-icon-button__tsikloferon-style:not(:disabled):not(.es-disabled) {
+    cursor: pointer; }
+  .es-icon-button__tsikloferon-style:not(:disabled):not(.es-disabled):active, .es-icon-button__tsikloferon-style:not(:disabled):not(.es-disabled).es-active {
+    box-shadow: inset 0 3px 5px rgba(171, 3, 88, 0.125); }
+    .es-icon-button__tsikloferon-style:not(:disabled):not(.es-disabled):active:focus, .es-icon-button__tsikloferon-style:not(:disabled):not(.es-disabled).es-active:focus {
+      box-shadow: 0 0 0 0.2rem rgba(171, 3, 88, 0.25); }
+
+.es-icon-button__tsikloferon-style__icon {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  object-fit: contain;
+  object-position: center;
+  font-family: "object-fit: contain; object-position: center;"; }
+
+@charset "UTF-8";
+.es-gamburger-button {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 0.1875rem #ab0358;
+  border-radius: 100px;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s;
+  outline: none; }
+
+.es-gamburger-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 60%;
+  height: 0.1875rem;
+  background: #ab0358;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s; }
+
+.es-gamburger-button span::before,
+.es-gamburger-button span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 0.1875rem;
+  background-color: #ab0358;
+  transition: background 0.3s; }
+
+.es-gamburger-button span::before {
+  top: -0.5rem; }
+
+.es-gamburger-button span::after {
+  bottom: -0.5rem; }
+
+.gumburger-button span {
+  transition: background 0s 0.3s; }
+
+.es-gamburger-button span::before,
+.es-gamburger-button span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s; }
+
+.es-gamburger-button span::before {
+  transition-property: top, transform, background; }
+
+.es-gamburger-button span::after {
+  transition-property: bottom, transform, background; }
+
+/* состояние active при открытом меню  */
+.es-gamburger-button.is-active span {
+  background: none; }
+
+.es-gamburger-button.is-active span::before {
+  top: 0;
+  background: #ab0358;
+  transform: rotate(45deg); }
+
+.es-gamburger-button.is-active span::after {
+  bottom: 0;
+  background: #ab0358;
+  transform: rotate(-45deg); }
+
+.es-gamburger-button.is-active span::before,
+.es-gamburger-button.is-active span::after {
+  transition-delay: 0s, 0.3s; }
+
+.es-close-button__container {
+  display: inline-block; }
+
+.es-close-button__circle {
+  position: relative;
+  display: inline-block;
+  margin: 10px 20px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ab0358;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer; }
+
+.es-close-button__circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -12px;
+  width: 24px;
+  height: 4px;
+  background-color: #ab0358;
+  transform: rotate(-45deg);
+  /*@include transform-origin(100%,100%);*/ }
+
+.es-close-button__circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -12px;
+  width: 24px;
+  height: 4px;
+  background-color: #ab0358;
+  transform: rotate(45deg);
+  /*@include transform-origin(0%,0%);*/ }
+
+.es-close-button__circle {
+  border: 0px solid #ab0358;
+  box-shadow: 0px 0px 0px 0px #ffffff inset;
+  transition: cubic-bezier(0.175, 0.885, 0.52, 1.775) 200ms; }
+
+.es-close-button__circle::before,
+.circle[data-animation="showShadow"]::after {
+  transition: cubic-bezier(0.175, 0.885, 0.52, 1.775) 200ms; }
+
+.es-close-button__circle:not(.close-animation):hover {
+  box-shadow: 0px 0px 0px 4px #ab0358 inset; }
+
+.es-close-button__circle:not(.close-animation):hover::before {
+  transform: scale(0.7) rotate(45deg);
+  transition-delay: 100ms; }
+
+.es-close-button__circle:not(.close-animation):hover::after {
+  transform: scale(0.7) rotate(-45deg);
+  transition-delay: 100ms; }
+
+.es-close-button__circle.close-animation {
+  opacity: 0;
+  transform: scale(0);
+  transition: ease-out 300ms; }
 

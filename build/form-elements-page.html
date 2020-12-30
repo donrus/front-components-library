@@ -1,0 +1,250 @@
+
+<!--использование +icon('имя файл иконки', 'имя дополнительного класса для стилей'--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Элементы форм</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content=""><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="js/polyfills.js"></script>
+  <meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="front-components-library"><link rel="apple-touch-icon" sizes="57x57" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="front-components-library"><link rel="icon" type="image/png" sizes="32x32" href="icons-9b224c9884c2bb081d4ac92b23675c2e/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="icons-9b224c9884c2bb081d4ac92b23675c2e/favicon-16x16.png"><link rel="shortcut icon" href="icons-9b224c9884c2bb081d4ac92b23675c2e/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="icons-9b224c9884c2bb081d4ac92b23675c2e/apple-touch-startup-image-1536x2008.png"><link href="./css/common.css?062552ae99a644628c85" rel="stylesheet"><link href="./css/form-elements-page.css?062552ae99a644628c85" rel="stylesheet"></head>
+  <body class="form-elements-page">
+    <div class="content">
+      <h1>Элементы форм</h1>
+      <section>
+        <h2>Поля ввода</h2>
+        <div class="inputs-container">
+          <div class="input-container">
+            <div class="component-name">es-custom-input__tsikloferon-style__feedback-form</div>
+            <div class="es-custom-input__container input-name-container tsikloferon-style__feedback-form">
+              <label class="es-custom-input__label registration-form__input-label" for="registrationName"></label>
+              <input class="es-custom-input__field registration-form__input-name" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <div class="es-custom-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-input__tsikloferon-style</div>
+            <div class="es-custom-input__container input-name-container tsikloferon-style">
+              <label class="es-custom-input__label registration-form__input-label" for="registrationName"></label>
+              <input class="es-custom-input__field registration-form__input-name" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <div class="es-custom-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-input__bootstrap-style</div>
+            <div class="es-custom-input__container input-name-container bootstrap-style">
+              <label class="es-custom-input__label registration-form__input-label" for="registrationName"></label>
+              <input class="es-custom-input__field registration-form__input-name" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <div class="es-custom-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-input__digital-easy-style</div>
+            <div class="es-custom-input__container input-name-container digital-easy-style">
+              <label class="es-custom-input__label registration-form__input-label" for="registrationName"></label>
+              <input class="es-custom-input__field registration-form__input-name" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <div class="es-custom-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__border-bottom-from-left</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__border-bottom-from-left ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-border-bottom-from-left" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__border-bottom-from-center</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__border-bottom-from-center ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-border-bottom-from-center" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__border-bottom-from-sides</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__border-bottom-from-sides ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-border-bottom-from-sides" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__borders-from-bottom</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__borders-from-bottom ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-borders-from-bottom" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__borders-from-left</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__borders-from-left ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-borders-from-left" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__borders-from-right</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__borders-from-right ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-borders-from-right" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__borders-outline-from-center</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__borders-outline-from-center ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-borders-outline-from-center" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__borders-outline-from-coners</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__borders-outline-from-coners ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-borders-outline-from-coners" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__borders-outline-from-one-coner</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__borders-outline-from-one-coner ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-borders-outline-from-one-coner" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__bg-fade</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__bg-fade ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-bg-fade" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__bg-from-left</div>
+            <div class="es-custom-animated-input__container es-custom-animated-bg-from-left ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-bg-from-left" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__bg-from-center</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__bg-from-center ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-bg-from-center" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__bg-from-sides</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__bg-from-sides ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-bg-from-sides" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__bg-from-coners</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__bg-from-coners ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-bg-from-coners" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__bg-from-center</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__bg-from-center ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-bg-from-center-point" type="text" id="registrationName" name="name" placeholder="Ваше имя">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName"></label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__floating-label</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__floating-label ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-floating-label" type="text" id="registrationName" name="name" placeholder="">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName">Имя</label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-animated-input__mixed-effects</div>
+            <div class="es-custom-animated-input__container es-custom-animated-input__mixed-effects ">
+              <input class="es-custom-animated-input__field registration-form__input-name input-floating-label input-bg-from-center input-borders-from-right" type="text" id="registrationName" name="name" placeholder="">
+              <label class="es-custom-animated-input__label registration-form__input-label" for="registrationName">Имя</label><span class="es-custom-animated-input__focus-effects"><span class="es-custom-animated-input__focus-effects-helper"></span></span>
+              <div class="es-custom-animated-input__error-message"></div>
+            </div>
+          </div>
+        </div>
+        <h2>Чекбоксы</h2>
+        <div class="inputs-container">
+          <div class="input-container">
+            <div class="component-name">es-custom-checkbox__tsikloferon-style</div>
+            <div class="es-custom-checkbox__container rules-checkbox es-custom-checkbox__tsikloferon-style">
+              <label class="es-custom-checkbox__label"><span class="es-custom-checkbox__label-text">Согласен с правилами</span><a class="es-custom-checkbox__link" href="http://www.europaplus.ru/index.php?go=Content&amp;id=1793" target="_blank"> обработки и хранения данных</a><span class="es-custom-checkbox__label-text"></span>
+                <input class="es-custom-checkbox__checkbox" type="checkbox" checked id="rulesCheckbox" name="personal_data_processing" value="1">
+                <div class="es-custom-checkbox__icon-container"></div>
+              </label>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-rubber-checkbox</div>
+<div class="es-rubber-checkbox__container">
+  <div class="es-rubber-checkbox__toggle">
+    <input class="es-rubber-checkbox__input" type="checkbox"><span class="es-rubber-checkbox__button"></span><span class="es-rubber-checkbox__label">+</span>
+  </div>
+  <div class="es-rubber-checkbox__toggle">
+    <input class="es-rubber-checkbox__input" type="checkbox"><span class="es-rubber-checkbox__button"></span><span class="es-rubber-checkbox__label">-</span>
+  </div>
+</div>
+          </div>
+        </div>
+        <h2>Селекты</h2>
+        <div class="inputs-container">
+          <div class="input-container">
+            <div class="component-name">es-custom-select__tsikloferon-style-feedback</div>
+            <!--mixin es-custom-select(customSelectFromContainer, customSelectClassModifier, selectID, selectClass, labelText, labelClass, selectPlaceholder)-->
+            <div class="es-custom-select__container  es-custom-select__tsikloferon-style-feedback">
+              <label class="es-custom-select__label ask-question-form__select-question-topic-label" for="questionTopic"></label>
+              <select class="custom-select ask-question-form__select-question-topic" id="questionTopic" name="subject_id" data-placeholder="Тема обращения">
+                <option value="">Тема обращения</option>
+                <option value="1">Регистрация</option>
+                <option value="2">Промо-пост</option>
+                <option value="3">Получение призов</option>
+                <option value="4">Работа сайта</option>
+                <option value="5">Другое</option>
+              </select>
+              <div class="es-custom-select__error-message"></div>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="component-name">es-custom-select__tsikloferon-style</div>
+            <!--mixin es-custom-select(customSelectFromContainer, customSelectClassModifier, selectID, selectClass, labelText, labelClass, selectPlaceholder)-->
+            <div class="es-custom-select__container  es-custom-select__tsikloferon-style">
+              <label class="es-custom-select__label ask-question-form__select-question-topic-label" for="questionTopic"></label>
+              <select class="custom-select ask-question-form__select-question-topic" id="questionTopic" name="subject_id" data-placeholder="Тема обращения">
+                <option value="">Тема обращения</option>
+                <option value="1">Регистрация</option>
+                <option value="2">Промо-пост</option>
+                <option value="3">Получение призов</option>
+                <option value="4">Работа сайта</option>
+                <option value="5">Другое</option>
+              </select>
+              <div class="es-custom-select__error-message"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/common.js?062552ae99a644628c85"></script><script type="text/javascript" src="./js/form-elements-page.js?062552ae99a644628c85"></script></body>
+</html>

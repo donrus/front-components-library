@@ -14,8 +14,9 @@ const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 const babel = require('./webpack/babel');
 const favicon = require('./webpack/favicon');
+const CopyPlugin = require('copy-webpack-plugin');
 
-const fs = require('fs')
+const fs = require('fs');
 
 const PATHS = {
   source: path.join(__dirname, 'dev'),
@@ -24,14 +25,17 @@ const PATHS = {
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  return templateFiles.map(item => {
+  return templateFiles.map((item) => {
     const parts = item.split('.');
     const name = parts[0];
     //const extension = parts[1];
     const extension = 'pug';
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
-      template: path.resolve(__dirname, `${templateDir}/${name}/${name}.${extension}`),
+      template: path.resolve(
+        __dirname,
+        `${templateDir}/${name}/${name}.${extension}`
+      ),
       chunks: [name, 'common'],
     });
   });
@@ -44,7 +48,10 @@ function generateEntryPoints(templateDir) {
     const parts = templateFiles[i].split('.');
     const name = parts[0];
     const extension = 'js';
-    entryObject[name] = path.resolve(__dirname, `${templateDir}/${name}/${name}.${extension}`);
+    entryObject[name] = path.resolve(
+      __dirname,
+      `${templateDir}/${name}/${name}.${extension}`
+    );
   }
   return entryObject;
 }
@@ -64,11 +71,49 @@ const common = merge([
         $: 'jquery',
         jQuery: 'jquery',
       }),
+      new CopyPlugin([
+        {
+          from: 'dev/**/*.jpg',
+          to: 'images/',
+          flatten: true,
+        },
+        {
+          from: 'dev/**/*.jpeg',
+          to: 'images/',
+          flatten: true,
+        },
+        {
+          from: 'dev/**/*.png',
+          to: 'images/',
+          flatten: true,
+        },
+        {
+          from: 'dev/**/*.svg',
+          to: 'images/',
+          // test: /([^/]+)\/(.+)\.(jpg|png|svg)$/,
+          flatten: true,
+        },
+        {
+          from: 'dev/**/*.pdf',
+          to: 'documents',
+          flatten: true,
+        },
+        {
+          from: 'dev/**/*.docx',
+          to: 'documents',
+          flatten: true,
+        },
+        {
+          from: 'dev/app/libs/**/*.js',
+          to: 'js',
+          flatten: true,
+        },
+      ]),
     ].concat(htmlPages),
     optimization: {
       splitChunks: {
         cacheGroups: {
-          'common': {
+          common: {
             minChunks: 2,
             chunks: 'all',
             name: 'common',
@@ -87,22 +132,11 @@ const common = merge([
   babel(),
 ]);
 
-
-module.exports = function(env, argv) {
+module.exports = function (env, argv) {
   if (argv.mode === 'production') {
-    return merge([
-      common,
-      extractCSS(),
-      favicon(),
-    ]);
+    return merge([common, extractCSS(), favicon()]);
   }
   if (argv.mode === 'development') {
-    return merge([
-      common,
-      devserver(),
-      sass(),
-      css(),
-      sourceMap(),
-    ]);
+    return merge([common, devserver(), sass(), css(), sourceMap()]);
   }
 };

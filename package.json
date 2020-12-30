@@ -4,7 +4,7 @@
   "description": "Библиотека компонентов для верстки",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development --watch",
     "build": "webpack --mode production",
     "serv": "static build",
     "test": "jest",
@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.0.0",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.2",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-loader": "^2.1.0",

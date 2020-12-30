@@ -1,0 +1,12 @@
+.masks-page section {
+  background-color: aqua; }
+
+.divider {
+  height: 20px; }
+
+.masked-section {
+  max-width: 98px;
+  height: 70px;
+  background-color: red;
+  clip-path: url(#polygonClip); }
+

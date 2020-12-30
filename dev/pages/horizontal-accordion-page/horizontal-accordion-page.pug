@@ -1,0 +1,13 @@
+extends ../../templates/components
+
+block variables
+    - var title = 'Горизонтальный аккордион'
+    - var pageClass = 'horizontal-accordion-page'
+
+block content
+    .container
+        .panel.active(style="background-image: url(./images/image1.jpg)")
+        .panel(style="background-image: url(./images/image2.jpg)")
+        .panel(style="background-image: url(./images/image3.jpg)")
+        .panel(style="background-image: url(./images/image4.jpg)")
+        .panel(style="background-image: url(./images/image5.jpg)")

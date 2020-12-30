@@ -1,18 +1,14 @@
 extends ../../templates/components
 
-
 block variables
-    - var title = 'Аккордеоны'
+    - var title = 'Аккордионы'
     - var pageClass = 'accordions-page'
 
 block content
-    h1 Аккордеоны
-    .component-name es-accordion
-    .es-accordion__container
-        include es-accordion-items
-
-    .component-name es-accordion-tsikloferon
-    .es-accordion-tsikloferon__container
-        include es-accordion-items
-
-
+    h1 Каталог аккордионов
+    section
+        a(href='custom-accordion-page.html').section-caption Вертикальный аккордион (циклоферон)
+        br
+        a(href='horizontal-accordion-page.html').section-caption Горизонтальный аккордион с картинками
+        br
+        

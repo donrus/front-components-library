@@ -61,24 +61,24 @@
   display: block;
   margin: 60px auto 0 auto;
   border: 0;
+  border-bottom: 2px solid #ab0358;
   background-color: #ffffff;
   font-family: "RobotoRegular";
   font-size: 26px;
   text-align: center;
   color: #ab0358;
-  border-bottom: 2px solid #ab0358;
   cursor: pointer; }
 
 .faq-section__show-min {
   display: block;
   margin: 60px auto 0 auto;
   border: 0;
+  border-bottom: 2px solid #ab0358;
   background-color: #ffffff;
   font-family: "RobotoRegular";
   font-size: 26px;
   text-align: center;
   color: #ab0358;
-  border-bottom: 2px solid #ab0358;
   cursor: pointer; }
 
 .faq-section__show-none {
