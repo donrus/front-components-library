@@ -68,8 +68,8 @@ const common = merge([
     },
     plugins: [
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
+        // $: 'jquery',
+        // jQuery: 'jquery',
       }),
       new CopyPlugin([
         {
@@ -106,6 +106,16 @@ const common = merge([
         {
           from: 'dev/app/libs/**/*.js',
           to: 'js',
+          flatten: true,
+        },
+        {
+          from: 'dev/**/libs/*.js',
+          to: 'js',
+          flatten: true,
+        },
+        {
+          from: 'dev/**/libs/*.css',
+          to: 'css',
           flatten: true,
         },
       ]),

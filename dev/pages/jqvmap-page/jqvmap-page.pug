@@ -1,0 +1,20 @@
+extends ../../templates/components
+
+block variables
+    - var title = 'Интерактивная карта'
+    - var pageClass = 'jqvmap-page'
+
+block links
+    link(rel="stylesheet" href="css/jqvmap.min.css" media="screen" type="text/css")
+    script(type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js")
+    script(type="text/javascript" src="./js/jquery.vmap.js")
+    script(type="text/javascript" src="./js/jquery.vmap.russia-ru.js" charset="utf-8")
+block content
+    .container
+      include ../../components/maps/jqvmap/jqvmap.pug
+      .pins-container  
+        #cr-pin
+            .pin-container 
+                .pin 
+                .text Симферополь
+            

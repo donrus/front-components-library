@@ -1,0 +1,11 @@
+extends ../../templates/components
+
+block variables
+    - var title = 'Поле поиска'
+    - var pageClass = 'search-input-page'
+
+block links
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PK0gIY59xJ8Co*+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous")
+
+block content
+    include ../../components/form-components/inputs/search-input/search-input.pug
